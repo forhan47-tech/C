@@ -9,7 +9,8 @@ void secondFunction() {
 }
 
 int main() {
-    firstFunction();   // Output: Executing: firstFunction
-    secondFunction();  // Output: Executing: secondFunction
+    printf("Starting main function.\n");
+    firstFunction();   
+    secondFunction();  
     return 0;
 }

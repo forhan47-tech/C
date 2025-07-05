@@ -1,16 +1,14 @@
 #include <stdio.h>
 
-int main() {
-    #ifdef _WIN32
-        printf("Windows-specific code.\n");
-    #elif __linux__
-        printf("Linux-specific code.\n");
-    #elif __APPLE__
-        printf("macOS-specific code.\n");
-    #else
-        printf("Unknown platform.\n");
-    #endif
+#ifdef _WIN32
+    #define OS "Windows"
+#elif __linux__
+    #define OS "Linux"
+#else
+    #define OS "Unknown OS"
+#endif
 
+int main() {
+    printf("Running on: %s\n", OS);  // Fixed the syntax error
     return 0;
 }
-

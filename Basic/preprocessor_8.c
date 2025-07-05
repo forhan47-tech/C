@@ -2,10 +2,13 @@
 
 #define TEMP 25
 
-#undef TEMP
-
 int main() {
-    // TEMP is no longer defined, so attempting to use it will cause an error
+    printf("TEMP before undef: %d\n", TEMP);
+
+    // Now we undefine TEMP
+    #undef TEMP
+
+    // Trying to use TEMP now would cause a compiler error
+    // printf("TEMP after undef: %d\n", TEMP); // ❌ This will fail
     return 0;
 }
-

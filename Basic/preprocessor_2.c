@@ -1,17 +1,17 @@
 #include <stdio.h>
 
-// Define a macro VERSION
-#define VERSION 1
+// Define a macro named LEVEL with a value of 2
+#define LEVEL 2
 
 int main() {
-    // This line triggers a custom error if reached
-    #error "This is an error message."
-
-    // Conditional preprocessor directive
-    #if VERSION < 2
-        #error "Version is too old! Update required."
+    // Use conditional preprocessing to include appropriate code
+    #if LEVEL == 1
+        printf("Level 1.\n");
+    #elif LEVEL == 2
+        printf("Level 2.\n");
+    #else
+        printf("Unknown level.\n");
     #endif
 
-    printf("Code compiled successfully.\n");
     return 0;
 }
