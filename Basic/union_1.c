@@ -19,5 +19,9 @@ int main() {
     d1.letter = 'A'; // Assign value to letter (overwrites decimal)
     printf("Letter: %c\n", d1.letter);
 
+    // Note: Accessing num or decimal after assigning letter will yield unexpected results
+    printf("Number after assigning letter: %d\n", d1.num);
+    printf("Decimal after assigning letter: %.2f\n", d1.decimal);       
+    
     return 0;
 }

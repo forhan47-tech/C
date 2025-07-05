@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-#define GREETING "Hello, World!"
+#define MODE "DEV"
+
+#ifdef MODE
+    #undef MODE
+    #define MODE "PROD"
+#endif
 
 int main() {
-    printf("%s\n", GREETING); // Prints: Hello, World!
-
-    #undef GREETING
-
-    // Trying to use GREETING after #undef will cause a compilation error
+    printf("Application running in %s mode\n", MODE);
     return 0;
 }
-

@@ -1,9 +1,13 @@
 #include <stdio.h>
 
-#define DEBUG_PRINT(msg) \
-    printf("DEBUG - File: %s, Line: %d, Date: %s, Time: %s, Message: %s\n", __FILE__, __LINE__, __DATE__, __TIME__, msg)
+#define LOG(var) printf(#var " = %d\n", var)
 
 int main() {
-    DEBUG_PRINT("This is a debug message.");
+    int score = 42;
+    int lives = 3;
+
+    LOG(score); // Output: score = 42
+    LOG(lives); // Output: lives = 3
+
     return 0;
 }

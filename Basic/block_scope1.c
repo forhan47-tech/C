@@ -1,4 +1,4 @@
-#include <stdio.h> // Include standard input-output header
+#include <stdio.h> 
 
 void example() {
     int x = 5; // Variable in outer block
@@ -11,6 +11,6 @@ void example() {
 
 int main() {
     printf("Calling example function:\n");
-    example(); // Call the example function
-    return 0;  // Indicate successful program termination
+    example();
+    return 0;  
 }
