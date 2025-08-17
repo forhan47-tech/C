@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    char str[1000];
+    int freq[256] = {0};  // ASCII character frequency
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    // Count frequency of each character
+    for (int i = 0; str[i] != '\0'; i++) {
+        unsigned char ch = str[i];
+        if (ch != '\n' && ch != ' ')  // Skip newline and space
+            freq[ch]++;
+    }
+
+    // Find character with maximum frequency
+    int maxFreq = 0;
+    char maxChar = '\0';
+    for (int i = 0; i < 256; i++) {
+        if (freq[i] > maxFreq) {
+            maxFreq = freq[i];
+            maxChar = (char)i;
+        }
+    }
+
+    printf("\nMaximum Frequency Character: '%c' occurred %d times\n", maxChar, maxFreq);
+    return 0;
+}
