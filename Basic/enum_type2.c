@@ -1,16 +1,9 @@
 #include <stdio.h>
 
-enum Status {
-    SUCCESS = 1,  // Assigned value 1
-    FAILURE = -1, // Assigned value -1
-    PENDING = 0   // Assigned value 0
-};
+enum Level { LOW = 10, MEDIUM = 20, HIGH = 30 };
 
 int main() {
-    // Check if PENDING is equal to 0 and print a message accordingly
-    if (PENDING == 0) {
-        printf("Operation is pending.\n");
-    }
-
+    enum Level l = MEDIUM;
+    printf("Level value: %d\n", l);  // Output: 20
     return 0;
 }

@@ -1,37 +1,23 @@
 #include <stdio.h>
 
-// Define nested structure
-struct Address {
-    char city[30];
-    char country[30];
+struct Date {
+    int day, month, year;
 };
 
 struct Student {
     char name[50];
-    int age;
-    struct Address address;  // Nested structure
+    struct Date dob;
 };
 
 int main() {
-    struct Student s1;
+    struct Student s;
 
-    // Taking input
-    printf("Enter Name: ");
-    scanf("%s", s1.name);
+    printf("Enter name: ");
+    scanf("%s", s.name);
 
-    printf("Enter Age: ");
-    scanf("%d", &s1.age);
+    printf("Enter DOB (dd mm yyyy): ");
+    scanf("%d %d %d", &s.dob.day, &s.dob.month, &s.dob.year);
 
-    printf("Enter City: ");
-    scanf("%s", s1.address.city);
-
-    printf("Enter Country: ");
-    scanf("%s", s1.address.country);
-
-    // Displaying data
-    printf("\nStudent Details:\n");
-    printf("Name: %s\n, Age: %d\n, City: %s\n, Country: %s\n", s1.name, s1.age, s1.address.city, s1.address.country);
-
+    printf("\nName: %s\nDOB: %02d-%02d-%d\n", s.name, s.dob.day, s.dob.month, s.dob.year);
     return 0;
 }
-

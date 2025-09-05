@@ -1,18 +1,16 @@
 #include <stdio.h>
 
-struct Person {
+struct Student {
+    int id;
     char name[50];
-    int age;
-    float height;
 };
 
-void display(struct Person p) {
-    printf("Name: %s, Age: %d, Height: %.2f\n", p.name, p.age, p.height);
+void display(struct Student s) {
+    printf("ID: %d, Name: %s\n", s.id, s.name);
 }
 
 int main() {
-    struct Person person1 = {"Alice", 25, 5.6};
-    display(person1);  // Pass by value
+    struct Student s1 = {101, "NAIMUDDIN"};
+    display(s1);  // Pass by value
     return 0;
 }
-

@@ -1,30 +1,27 @@
 #include <stdio.h>
+#include <string.h>
+
+struct Subject {
+    char name[30];
+    int marks;
+};
 
 struct Student {
     char name[50];
-    int age;
-    float marks;
+    struct Subject subjects[3];  // Array of nested structs
 };
 
 int main() {
-    struct Student students[2];  // Array of structures
+    struct Student s = {"NAIMUDDIN", {
+        {"Math", 95},
+        {"Physics", 90},
+        {"Chemistry", 92}
+    }};
 
-    // Taking input for multiple students
-    for (int i = 0; i < 2; i++) {
-        printf("Enter Name: ");
-        scanf("%s", students[i].name);
-        printf("Enter Age: ");
-        scanf("%d", &students[i].age);
-        printf("Enter Marks: ");
-        scanf("%f", &students[i].marks);
-    }
-
-    // Displaying data
-    printf("\nStudent Records:\n");
-    for (int i = 0; i < 2; i++) {
-        printf("Name: %s, Age: %d, Marks: %.2f\n", students[i].name, students[i].age, students[i].marks);
+    printf("Student: %s\n", s.name);
+    for (int i = 0; i < 3; i++) {
+        printf("Subject: %s, Marks: %d\n", s.subjects[i].name, s.subjects[i].marks);
     }
 
     return 0;
 }
-

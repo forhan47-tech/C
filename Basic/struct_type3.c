@@ -1,19 +1,17 @@
 #include <stdio.h>
 
-typedef struct {
-    int x;
-    int y;
-} Point;
+struct Student {
+    int id;
+    char name[50];
+    float percentage;
+};
 
 int main() {
-    // Positional initialization
-    Point p1 = {10, 20};
-    Point p2 = {30, 40};
+    struct Student s1 = {101, "NAIMUDDIN", 95.5};
 
-    // Printing values
-    printf("Point 1: (%d, %d)\n", p1.x, p1.y);
-    printf("Point 2: (%d, %d)\n", p2.x, p2.y);
+    printf("ID: %d\n", s1.id);
+    printf("Name: %s\n", s1.name);
+    printf("Percentage: %.2f\n", s1.percentage);
 
     return 0;
 }
-

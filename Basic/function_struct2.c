@@ -1,23 +1,19 @@
 #include <stdio.h>
+#include <string.h>
 
-
-struct Point {
-    int x, y; 
+struct Student {
+    int id;
+    char name[50];
 };
 
-struct Point createPoint(int x, int y) {
-    struct Point p = {x, y}; 
-    return p; 
-}
-
-void displayPoint(struct Point p) {
-    printf("Point coordinates: (%d, %d)\n", p.x, p.y);
+void update(struct Student *s) {
+    s->id = 202;
+    strcpy(s->name, "UPDATED");
 }
 
 int main() {
-    struct Point p1 = createPoint(5, 10);
-
-    displayPoint(p1);
-
-    return 0; 
+    struct Student s1 = {101, "NAIMUDDIN"};
+    update(&s1);  // Pass by reference
+    printf("ID: %d, Name: %s\n", s1.id, s1.name);
+    return 0;
 }

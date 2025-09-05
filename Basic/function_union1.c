@@ -1,25 +1,22 @@
 #include <stdio.h>
+#include <string.h>
 
 union Data {
-    int intValue;
-    float floatValue;
+    int i;
+    float f;
+    char str[20];
 };
 
-union Data getData(int type) {
-    union Data d;
-    
-    if (type == 1) {
-        d.intValue = 42;
-    } else {
-        d.floatValue = 9.99;
-    }
-    
-    return d;
+void printData(union Data d) {
+    printf("Integer: %d\n", d.i);
+    printf("Float: %.2f\n", d.f);
+    printf("String: %s\n", d.str);
 }
 
 int main() {
-    union Data d = getData(2);
-    printf("Float Value: %.2f\n", d.floatValue);
+    union Data d;
+    
+    strcpy(d.str, "NAIMUDDIN");  // Only str is valid now
+    printData(d);                // Pass by value
     return 0;
 }
-

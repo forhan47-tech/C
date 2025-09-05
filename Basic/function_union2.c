@@ -1,28 +1,21 @@
 #include <stdio.h>
+#include <string.h>
 
 union Data {
-    int intValue;
-    float floatValue;
+    int i;
+    char str[20];
 };
 
-// Function to print union data
-void printData(union Data d, int type) {
-    if (type == 1) {
-        printf("Integer: %d\n", d.intValue);
-    } else if (type == 2) {
-        printf("Float: %.2f\n", d.floatValue);
-    }
+void updateData(union Data *d) {
+    d->i = 2025;
 }
 
 int main() {
-    union Data data1;
+    union Data d;
     
-    data1.intValue = 100;
-    printData(data1, 1);  // Prints integer
-
-    data1.floatValue = 5.5;
-    printData(data1, 2);  // Prints float (memory overwritten)
-
+    strcpy(d.str, "NAIMUDDIN");  // Overwritten by updateData
+    updateData(&d);              // Pass by reference
+    printf("Updated Integer: %d\n", d.i);
     return 0;
 }
 

@@ -1,17 +1,21 @@
 #include <stdio.h>
 
-struct Point {
-    int x;
-    int y;
+struct Student {
+    int id;
+    char name[50];
+    float percentage;
 };
 
 int main() {
-    struct Point p = {10, 20};  // Declaring and initializing a struct
-    struct Point *ptr = &p;     // Pointer to the struct
-    
-    // Accessing members through the pointer
-    printf("Point coordinates: x = %d, y = %d\n", ptr->x, ptr->y);
+    struct Student s2 = {
+        .name = "NAIMUDDIN",
+        .percentage = 99.9,
+        .id = 102
+    };
+
+    printf("ID: %d\n", s2.id);
+    printf("Name: %s\n", s2.name);
+    printf("Percentage: %.2f\n", s2.percentage);
 
     return 0;
 }
-

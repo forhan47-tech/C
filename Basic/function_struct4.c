@@ -1,22 +1,20 @@
 #include <stdio.h>
+#include <string.h>
 
 struct Student {
+    int id;
     char name[50];
-    int age;
-    float marks;
 };
 
-// Function to modify student details
-void modifyStudent(struct Student *s) {
-    s->age += 1;  // Modify structure using pointer
-    s->marks += 5;
+struct Student createStudent(int id, const char *name) {
+    struct Student s;
+    s.id = id;
+    strcpy(s.name, name);
+    return s;
 }
 
 int main() {
-    struct Student student1 = {"Alice", 20, 89.5};
-    modifyStudent(&student1);  // Pass structure by reference
-    printf("Updated Age: %d\n", student1.age);
-    printf("Updated Marks: %.2f\n", student1.marks);
+    struct Student s1 = createStudent(303, "NAIMUDDIN");
+    printf("ID: %d, Name: %s\n", s1.id, s1.name);
     return 0;
 }
-

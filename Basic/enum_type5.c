@@ -1,22 +1,14 @@
 #include <stdio.h>
 
-typedef enum {
-    SUCCESS,  // Automatically assigned 0
-    FAILURE,  // Automatically assigned 1
-    PENDING   // Automatically assigned 2
-} Status;
+enum Gender { MALE, FEMALE };
+
+struct Person {
+    char name[50];
+    enum Gender gender;
+};
 
 int main() {
-    Status currentStatus = SUCCESS;  // Declare and initialize an enum variable using 'Status'
-
-    // Check the status and print appropriate messages
-    if (currentStatus == SUCCESS) {
-        printf("Operation succeeded!\n");
-    } else if (currentStatus == FAILURE) {
-        printf("Operation failed.\n");
-    } else {
-        printf("Operation is still pending.\n");
-    }
-
+    struct Person p = {"NAIMUDDIN", MALE};
+    printf("Name: %s, Gender: %s\n", p.name, p.gender == MALE ? "Male" : "Female");
     return 0;
 }

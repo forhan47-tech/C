@@ -1,23 +1,27 @@
 #include <stdio.h>
 
-// Define enum
-enum Status { Success, Failure };
+typedef enum {
+    OK = 0,
+    WARNING = 1,
+    ERROR = 2
+} Status;
 
-// Function to display status message
-void printStatus(enum Status s) {
-    if (s == Success) {
-        printf("Operation was successful!\n");
-    } else {
-        printf("Operation failed!\n");
-    }
+Status getStatusFromUser() {
+    int input;
+    printf("Enter status (0=OK, 1=WARNING, 2=ERROR): ");
+    scanf("%d", &input);
+    return (Status)input;
 }
 
 int main() {
-    enum Status result = Success;
+    Status s = getStatusFromUser();
 
-    // Pass enum value to function
-    printStatus(result);
+    switch (s) {
+        case OK:      printf("Status: OK\n"); break;
+        case WARNING: printf("Status: WARNING\n"); break;
+        case ERROR:   printf("Status: ERROR\n"); break;
+        default:      printf("Invalid status\n");
+    }
 
     return 0;
 }
-

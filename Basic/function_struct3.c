@@ -1,31 +1,21 @@
 #include <stdio.h>
 
-// Define structure
-struct Numbers {
-    int a, b;
-};
+typedef struct {
+    float real;
+    float imag;
+} Complex;
 
-// Function for addition
-int add(struct Numbers n) {
-    return n.a + n.b;
-}
-
-// Function for multiplication
-int multiply(struct Numbers n) {
-    return n.a * n.b;
+void addComplex(Complex c1, Complex c2, Complex *result) {
+    result->real = c1.real + c2.real;
+    result->imag = c1.imag + c2.imag;
 }
 
 int main() {
-    struct Numbers nums;
+    Complex a = {2.0, 3.0};
+    Complex b = {1.5, 4.5};
+    Complex sum;
 
-    // User input
-    printf("Enter two numbers: ");
-    scanf("%d %d", &nums.a, &nums.b);
-
-    // Call functions
-    printf("\nSum: %d\n", add(nums));
-    printf("Product: %d\n", multiply(nums));
-
+    addComplex(a, b, &sum);
+    printf("Sum: %.1f + %.1fi\n", sum.real, sum.imag);
     return 0;
 }
-
