@@ -1,22 +1,22 @@
 #include <stdio.h>
+#include <string.h>
 
-struct Person {
+struct Student {  // Define a structure
     char name[50];
-    int age;
-    float height;
+    int roll;
+    float marks;
 };
 
 int main() {
-    struct Person person1 = {
-        .name = "Alice",
-        .height = 5.6,
-        .age = 25
-    };
+    struct Student s1;
     
-    // Displaying the values
-    printf("Name: %s\n", person1.name);
-    printf("Age: %d\n", person1.age);
-    printf("Height: %.1f\n", person1.height);
+    strcpy(s1.name, "NAIMUDDIN");
+    s1.roll = 101;
+    s1.marks = 95.5;
+
+    printf("Name: %s\n", s1.name);
+    printf("Roll: %d\n", s1.roll);
+    printf("Marks: %.2f\n", s1.marks);
 
     return 0;
 }

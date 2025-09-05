@@ -1,23 +1,26 @@
 #include <stdio.h>
+#include <string.h>
 
-// Define a structure for storing user details
-struct User {
+struct Date {
+    int day, month, year;
+};
+
+struct Employee {
     char name[50];
-    int age;
-    float height;
+    struct Date joiningDate;
 };
 
 int main() {
-    struct User user1;  // Declare a structure variable
+    struct Employee e1;
 
-    // Get user input
-    printf("Enter your name, age, and height (in meters):\n");
-    scanf("%s %d %f", user1.name, &user1.age, &user1.height);
+    strcpy(e1.name, "NAIMUDDIN");
+    e1.joiningDate.day = 5;
+    e1.joiningDate.month = 9;
+    e1.joiningDate.year = 2025;
 
-    
-    // Display the stored data
-    printf("\nStored User Data:\n");
-    printf("Name: %s\n, Age: %d\n, Height: %.2f meters\n", user1.name, user1.age, user1.height);
+    printf("Employee: %s\n", e1.name);
+    printf("Joining Date: %02d/%02d/%d\n", e1.joiningDate.day, e1.joiningDate.month, e1.joiningDate.year);
+
     return 0;
 }
 

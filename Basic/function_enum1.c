@@ -1,19 +1,22 @@
 #include <stdio.h>
 
-enum Grade { A, B, C, D, F };
+typedef enum {
+    LOW = 1,
+    MEDIUM,
+    HIGH
+} Level;
 
-// Function to determine grade
-enum Grade getGrade(int marks) {
-    if (marks >= 90) return A;
-    else if (marks >= 80) return B;
-    else if (marks >= 70) return C;
-    else if (marks >= 60) return D;
-    return F;
+void printLevel(Level l) {
+    switch (l) {
+        case LOW:    printf("Level is LOW\n"); break;
+        case MEDIUM: printf("Level is MEDIUM\n"); break;
+        case HIGH:   printf("Level is HIGH\n"); break;
+        default:     printf("Unknown level\n");
+    }
 }
 
 int main() {
-    enum Grade result = getGrade(85);
-    printf("Grade: %d\n", result);  // Enum is printed as an integer
+    Level current = MEDIUM;
+    printLevel(current);
     return 0;
 }
-

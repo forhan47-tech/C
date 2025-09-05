@@ -1,19 +1,24 @@
-
 #include <stdio.h>
 
-enum Status { SUCCESS, FAILURE, RUNNING };
+typedef enum {
+    SUCCESS,
+    FAILURE
+} Status;
 
-// Function to print status
-void printStatus(enum Status s) {
-    switch (s) {
-        case SUCCESS: printf("Operation Successful!\n"); break;
-        case FAILURE: printf("Operation Failed!\n"); break;
-        case RUNNING: printf("Operation in Progress...\n"); break;
-    }
+Status checkValue(int x) {
+    if (x > 0)
+        return SUCCESS;
+    else
+        return FAILURE;
 }
 
 int main() {
-    enum Status currentStatus = RUNNING;
-    printStatus(currentStatus);
+    Status result = checkValue(-5);
+
+    if (result == SUCCESS)
+        printf("Operation succeeded\n");
+    else
+        printf("Operation failed\n");
+    
     return 0;
 }

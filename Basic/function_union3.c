@@ -1,23 +1,19 @@
 #include <stdio.h>
 
-union Data {
-    int id;
-    float salary;
+union Result {
+    int code;
+    float value;
 };
 
-// Function to display union data
-void display(union Data e) {
-    printf("ID: %d, Salary: %.2f\n", e.id, e.salary);
+union Result getResult() {
+    union Result r;
+    r.value = 99.9;  // Only value is valid
+    return r;
 }
 
 int main() {
-    union Data employee;
-    employee.id = 102;
-    display(employee);
-    
-    employee.salary = 60000.80;
-    display(employee);  // ID value is overwritten
-    
+    union Result res = getResult();
+    printf("Returned Value: %.2f\n", res.value);
     return 0;
 }
 

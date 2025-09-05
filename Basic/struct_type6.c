@@ -1,24 +1,23 @@
 #include <stdio.h>
-#include <string.h>
 
-struct Person {
+struct Student {
+    int roll;
     char name[50];
-    int age;
-    float height;
+    float marks;
 };
 
 int main() {
-    // Declare and initialize the array of structures
-    struct Person people[3] = {
-        {"Alice", 25, 5.6},
-        {"Bob", 30, 5.9},
-        {"Charlie", 22, 5.7}
-    };
+    struct Student s;
 
-    // Display the details of each person
-    for (int i = 0; i < 3; i++) {
-        printf("Name: %s, Age: %d, Height: %.2f\n", people[i].name, people[i].age, people[i].height);
-    }
+    printf("Enter roll number: ");
+    scanf("%d", &s.roll);
 
+    printf("Enter name: ");
+    scanf("%s", s.name);  // Avoids spaces; use fgets for full names
+
+    printf("Enter marks: ");
+    scanf("%f", &s.marks);
+
+    printf("\nStudent Info:\nRoll: %d\nName: %s\nMarks: %.2f\n", s.roll, s.name, s.marks);
     return 0;
 }

@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 enum Days {
-    MONDAY,    // 0
-    TUESDAY,   // 1
-    WEDNESDAY  // 2
+    MONDAY,   
+    TUESDAY,  
+    WEDNESDAY 
 };
 
 int main() {
-    enum Days firstDay = MONDAY, lastDay = WEDNESDAY;  // Initialize both
+    enum Days firstDay = MONDAY, lastDay = WEDNESDAY;  
 
-    printf("First Day: %d\n", firstDay);  // Prints: 0
-    printf("Last Day: %d\n", lastDay);    // Prints: 2
+    printf("First Day: %d\n", firstDay);  
+    printf("Last Day: %d\n", lastDay);   
 
     return 0;
 }
