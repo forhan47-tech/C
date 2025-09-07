@@ -1,15 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int arr[] = {10, 20, 30, 40, 50};
-    int *ptr = arr; // Pointer to the first element of the array
+    int arr[3] = {1, 2, 3, 4, 5}; 
+    int *ptr = arr;  
 
-    while (ptr < arr + 5) { // Loop until the pointer reaches the end of the array
-        printf("%d ", *p); // Dereference to access the value
-        ptr++; // Move to the next element
-    }
-    
-    printf("\n"); // Move to the next line for better output formatting
+    printf("First element: %d\n", *ptr); 
+
+    ptr++;            // Moves to the second element
+    printf("Second element: %d\n", *ptr); 
+
+    ptr +=2;         // Moves to the third element
+    printf("Third element: %d\n", *ptr); 
+
     return 0;
 }
+
 

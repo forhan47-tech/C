@@ -1,11 +1,13 @@
 #include <stdio.h>
 
-float divide(float a, float b) {
-    return a / b;
+// return integer, two integer parameters
+int add(int a, int b) {
+    return a + b;
 }
 
 int main() {
-    float result = divide(10.0, 4.0);
-    printf("Quotient: %.2f\n", result);
+    int result = add(5, 3);
+    
+    printf("Sum: %d\n", result);
     return 0;
 }

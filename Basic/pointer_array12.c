@@ -1,13 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    int arr[] = {10, 20, 30, 40, 50};
-    int *ptr = &arr[4];  // Points to the last element of the array
+    int arr[3] = {1, 2, 3, 4};
+    int (*ptr)[3] = &arr; // Pointer to entire array
 
-    printf("Array in reverse order:\n");
-    for (int i = 0; i < 5; i++) {
-        printf("%d ", *(ptr - i));  // Accessing elements in reverse
-    }
+    printf("First element: %d\n", (*ptr)[0]);
+    printf("Second element: %d\n", (*ptr)[1]);
 
     return 0;
 }

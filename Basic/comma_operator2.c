@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    int a = 5, b = 10, c;
+    int a = 0, b = 1, c = 0;
 
-    c = (a > b ? (a = a + b, b = b + 1) : (b = b - a, a = a - 1)); // Conditional logic with comma
+    c = (a++, b++, a + b); // Increment a, b, and calculate a + b
     printf("a = %d, b = %d, c = %d\n", a, b, c);
 
     return 0;

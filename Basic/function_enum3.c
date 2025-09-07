@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 typedef enum {
-    OK = 0,
-    WARNING = 1,
-    ERROR = 2
+    OK = 0, WARNING = 1, ERROR = 2
 } Status;
 
 Status getStatusFromUser() {
     int input;
+
     printf("Enter status (0=OK, 1=WARNING, 2=ERROR): ");
     scanf("%d", &input);
+
     return (Status)input;
 }
 

@@ -2,14 +2,13 @@
 #include <stdlib.h>
 
 int main() {
-    int *arr = (int*)calloc(5, sizeof(int));  // Allocate space for 5 integers
+    int *arr = (int*)calloc(5, sizeof(int));  // Allocate space
 
     if (arr == NULL) {
         printf("Memory allocation failed!\n");
         return 1;
     }
 
-    // Print stored values (initialized to 0)
     printf("Stored values after allocation: ");
     for (int i = 0; i < 5; i++) {
         printf("%d ", arr[i]);

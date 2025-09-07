@@ -1,13 +1,12 @@
 #include <stdio.h>
 
-#define MODE "DEV"
+#define FEATURE_LEVEL 1
 
-#ifdef MODE
-    #undef MODE
-    #define MODE "PROD"
+#if FEATURE_LEVEL < 2
+    #error "Feature level too low. Requires FEATURE_LEVEL >= 2."
 #endif
 
 int main() {
-    printf("Application running in %s mode\n", MODE);
+    printf("Feature level is %d\n", FEATURE_LEVEL);
     return 0;
 }

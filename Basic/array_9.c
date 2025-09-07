@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    int arr[] = {2, 4, 6, 8};
-    int i = 0;
+    const int numbers[5] = {10, 20, 30, 40, 50}; 
 
-    while (i < 4) {
-        printf("Element %d: %d\n", i, arr[i]);
-        i++;
+    // numbers[2] = 35; // Error: cannot modify a const array
+
+    printf("Elements of the constant array:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("numbers[%d] = %d\n", i, numbers[i]);
     }
 
     return 0;

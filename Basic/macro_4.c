@@ -11,6 +11,7 @@
 
 int main() {
     int num = -10;
+    
     CHECK_CONDITION(num);
     return 0;
 }

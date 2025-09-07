@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main() {
-    char str[] = "123";
-    int num = atoi(str); // Convert string to integer
-
-    printf("Converted number: %d\n", num);
+    srand(time(NULL));  // Seed the random number generator
+    
+    for (int i = 0; i < 5; i++) {
+        printf("%d\n", rand());
+    }
     return 0;
 }

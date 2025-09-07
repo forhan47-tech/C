@@ -1,16 +1,16 @@
 #include <stdio.h>
 
-// Function to modify the value at the address passed
-void modify(int *p) {
-    *p = 20; 
+void greet() {
+    printf("Hello, World!\n");
+}
+
+void displayMessage() {
+    printf("This is a message.\n");
+    greet();  // Calls greet() function
 }
 
 int main() {
-    int x = 10;  
-
-    modify(&x);  
-    printf("%d\n", x);  
-
+    displayMessage(); 
     return 0;
 }
 

@@ -1,19 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    FILE *filePointer = fopen("example.txt", "r");
-    char line[100];
-
-    if (filePointer == NULL) {
-        perror("Error opening file");
+    FILE *fptr = fopen("data.txt", "w");
+    
+    if (fptr == NULL) {
+        printf("Error opening file!\n");
         return 1;
     }
 
-    while (fgets(line, sizeof(line), filePointer) != NULL) {
-        printf("%s", line);
-    }
-
-    fclose(filePointer);
+    fputc('A', fptr); // Write character
+    fclose(fptr);
 
     return 0;
 }

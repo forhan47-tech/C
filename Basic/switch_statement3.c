@@ -1,46 +1,23 @@
 #include <stdio.h>
 
 int main() {
-    int department, role;
+    int month;
 
-    printf("Enter Department (1 for HR, 2 for IT): ");
-    scanf("%d", &department);
+    printf("Enter the month number (1-12): ");
+    scanf("%d", &month);
 
-    switch (department) {
-        case 1: // HR Department
-            printf("Enter Role (1 for Manager, 2 for Assistant): ");
-            scanf("%d", &role);
-
-            switch (role) {
-                case 1:
-                    printf("HR Manager\n");
-                    break;
-                case 2:
-                    printf("HR Assistant\n");
-                    break;
-                default:
-                    printf("Invalid role for HR Department\n");
-            }
+    switch (month) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            printf("31 days.\n");
             break;
-
-        case 2: // IT Department
-            printf("Enter Role (1 for Developer, 2 for Tester): ");
-            scanf("%d", &role);
-
-            switch (role) {
-                case 1:
-                    printf("IT Developer\n");
-                    break;
-                case 2:
-                    printf("IT Tester\n");
-                    break;
-                default:
-                    printf("Invalid role for IT Department\n");
-            }
+        case 4: case 6: case 9: case 11:
+            printf("30 days.\n");
             break;
-
+        case 2:
+            printf("28 or 29 days (depending on leap year).\n");
+            break;
         default:
-            printf("Invalid department\n");
+            printf("Invalid month number.\n");
     }
 
     return 0;

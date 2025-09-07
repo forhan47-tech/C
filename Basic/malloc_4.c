@@ -14,16 +14,12 @@ int main() {
         return 1;
     }
 
-    // Assigning values to the struct through the pointer
     ptr->x = 10;
     ptr->y = 20;
 
-    // Printing the values
     printf("Point coordinates: x = %d, y = %d\n", ptr->x, ptr->y);
 
-    // Freeing allocated memory
     free(ptr);
-
     return 0;
 }
 

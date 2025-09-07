@@ -1,14 +1,16 @@
 #include <stdio.h>
 
-// Uncomment the line below to test the behavior 
-#define DEBUG
+void firstFunction() {
+    printf("Executing: %s\n", __func__);
+}
+
+void secondFunction() {
+    printf("Executing: %s\n", __func__);
+}
 
 int main() {
-    #if defined(DEBUG)
-        printf("Debugging is enabled.\n");
-    #else
-        printf("Debugging is not enabled.\n");
-    #endif
-
+    printf("Starting main function.\n");
+    firstFunction();   
+    secondFunction();  
     return 0;
 }

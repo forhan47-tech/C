@@ -1,14 +1,23 @@
 #include <stdio.h>
 
 int main() {
-    char str[100];
+    // Example-1
+    char str1[] = "Hello, World!";
 
-    printf("Enter text (Ctrl+D or EOF to stop):\n");
+    printf("%s\n", str1); 
+    printf("First character: %c\n", str1[0]); 
+ 
+    // Example-2
+    char str2[] = {'H', 'e', 'l', 'l', 'o', '\0'};
 
-    while (fgets(str, sizeof(str), stdin) != NULL) {  // Reads until EOF
-        printf("You entered: %s", str);
-    }
+    printf("%s\n", str2); 
+    printf("Second character: %c\n", str2[1]); 
+    
+    // Example-3
+    char *str3 = "Hello, World!";
 
-    printf("Input ended.\n");
+    printf("%s\n", str3); 
+    printf("Third character: %c\n", str3[2]); 
+
     return 0;
 }

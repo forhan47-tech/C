@@ -1,11 +1,14 @@
 #include <stdio.h>
 
-// Function declaration
+// Declaration
+void greet(); 
+
+// Definition 
 void greet() {
     printf("Hello, NAIMUDDIN!\n");
 }
 
 int main() {
-    greet();  // Function call
+    greet();  // Call the function
     return 0;
 }

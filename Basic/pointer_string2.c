@@ -1,13 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    char str[] = "Hello";
+    char str[] = "C is fun";
     char *ptr = str;
 
-    while (*ptr != '\0') { // Loop until null terminator
-        printf("%c", *ptr);
-        ptr++; // Move to next character
-    }
-
+    ptr[0] = 'D';  // Modify first character
+    printf("Modified string: %s\n", str);
     return 0;
 }

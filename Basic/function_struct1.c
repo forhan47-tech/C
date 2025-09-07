@@ -11,6 +11,7 @@ void display(struct Student s) {
 
 int main() {
     struct Student s1 = {101, "NAIMUDDIN"};
-    display(s1);  // Pass by value
+    
+    display(s1); 
     return 0;
 }

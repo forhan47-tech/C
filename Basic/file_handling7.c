@@ -1,13 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    FILE *fptr = fopen("data.txt", "w");
+    FILE *fptr = fopen("data.txt", "r");
+    
     if (fptr == NULL) {
-        printf("Error opening file!\n");
+        printf("File not found!\n");
         return 1;
     }
 
-    fputc('A', fptr); // Write character
+    char buffer[100];
+    fgets(buffer, sizeof(buffer), fptr); // Read a line from the file
+    printf("Read: %s", buffer);
+
     fclose(fptr);
     return 0;
 }

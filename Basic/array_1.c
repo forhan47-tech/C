@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    // Array initialization
-    int numbers[] = {10, 20, 30, 40, 50}; // Size is 5
+    int numbers[] = {10, 20, 30, 40, 50};
 
     int size = sizeof(numbers) / sizeof(numbers[0]);
 

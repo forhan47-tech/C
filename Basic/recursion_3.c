@@ -1,16 +1,13 @@
 #include <stdio.h>
 
-// Function to print a sentence using recursion
-void printSentence(int count) {
-    if (count <= 0) { // Base case: Stop recursion
-        return;
-    }
-    printf("This is a recursive sentence.\n"); // Print sentence
-    printSentence(count - 1); // Recursive call(backtrack)
+void tailRecursion(int n) {
+    if (n == 0) return; // Base case
+    
+    printf("%d ", n);
+    tailRecursion(n - 1); // Tail call (last action)
 }
 
 int main() {
-    int n = 5; // Number of times to print the sentence
-    printSentence(n);
+    tailRecursion(5);
     return 0;
 }

@@ -5,7 +5,7 @@ int main() {
     char str1[] = "Hello";
     char str2[] = "World";
 
-    int result = strcmp(str1, str2);
+    int result = strcmp(str1, str2); // compare string
 
     if (result == 0) {
         printf("Strings are equal.\n");

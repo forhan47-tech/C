@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int *ptr = NULL; // Safer than leaving it uninitialized
+    int *ptr = NULL; 
 
     if (ptr == NULL) {
         printf("Pointer is not pointing to any valid memory location.\n");

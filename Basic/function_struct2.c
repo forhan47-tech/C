@@ -13,7 +13,9 @@ void update(struct Student *s) {
 
 int main() {
     struct Student s1 = {101, "NAIMUDDIN"};
-    update(&s1);  // Pass by reference
+
+    update(&s1); 
+    
     printf("ID: %d, Name: %s\n", s1.id, s1.name);
     return 0;
 }

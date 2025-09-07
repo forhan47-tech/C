@@ -1,20 +1,15 @@
 #include <stdio.h>
 #include <math.h>
-#include <stdlib.h> // For abs()
 
 int main() {
-    double x = -3.7;
-    int y = -4;
+    double x = 0.5;
 
-    // Nearest integer functions
-    printf("ceil(x) = %.2f\n", ceil(x));  // Rounds up
-    printf("floor(x) = %.2f\n", floor(x)); // Rounds down
-    printf("round(x) = %.2f\n", round(x)); // Nearest integer
-    printf("trunc(x) = %.2f\n", trunc(x)); // Truncates
-
-    // Absolute value functions
-    printf("fabs(x) = %.2f\n", fabs(x));   // Absolute value of float
-    printf("abs(y) = %d\n", abs(y));         // Absolute value of integer
+    printf("asin(%.1f) = %.4f radians\n", x, asin(x));
+    printf("acos(%.1f) = %.4f radians\n", x, acos(x));
+    printf("atan(%.1f) = %.4f radians\n", x, atan(x));
+    printf("sinh(%.1f) = %.4f\n", x, sinh(x));
+    printf("cosh(%.1f) = %.4f\n", x, cosh(x));
+    printf("tanh(%.1f) = %.4f\n", x, tanh(x));
 
     return 0;
 }

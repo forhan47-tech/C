@@ -6,8 +6,8 @@ int main() {
     int score = 42;
     int lives = 3;
 
-    LOG(score); // Output: score = 42
-    LOG(lives); // Output: lives = 3
+    LOG(score); 
+    LOG(lives); 
 
     return 0;
 }

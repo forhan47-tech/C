@@ -1,16 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    FILE *fptr = fopen("data.txt", "r");
-    if (fptr == NULL) {
-        printf("File not found!\n");
-        return 1;
+    FILE *fp = fopen("data.txt", "w");
+    if (fp == NULL) return 1;
+
+    for (int i = 1; i <= 3; i++) {
+        fprintf(fp, "ID: %d, Score: %.2f\n", i, i * 10.5);
     }
 
-    char buffer[100];
-    fgets(buffer, sizeof(buffer), fptr); // Read string
-    printf("Read: %s", buffer);
-
-    fclose(fptr);
+    fclose(fp);
     return 0;
 }

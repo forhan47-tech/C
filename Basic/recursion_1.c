@@ -1,16 +1,13 @@
 #include <stdio.h>
 
-// Recursive function to calculate factorial
-int factorial(int n) {
-    if (n == 0) { // Base case
-        return 1;
-    } else {
-    return n * factorial(n - 1); // Recursive case
-    }
+void directRecursion(int n) {
+    if (n <= 0) return; // Base case
+    
+    printf("%d ", n);
+    directRecursion(n - 1); // Recursive call
 }
 
 int main() {
-    int number = 5;
-    printf("Factorial of %d is %d\n", number, factorial(number));
+    directRecursion(5);
     return 0;
 }

@@ -1,11 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}};
-    int (*ptr)[3] = matrix; // Pointer to 2D array
+    int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int *ptr = &arr[0][0]; 
 
-    printf("First row, second element: %d\n", ptr[0][1]);
-    printf("Second row, third element: %d\n", ptr[1][2]);
+    printf("Processing elements:\n");
+    for (int i = 0; i < 9; i++) { // Total elements: 3x3 = 9
+        printf("%d ", *(ptr + i)); 
+    }
 
     return 0;
 }

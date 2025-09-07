@@ -8,10 +8,8 @@ struct Node {
 };
 
 int main() {
-    // Allocate memory for a new node
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
 
-    // Check if memory allocation was successful
     if (newNode == NULL) {
         printf("Memory allocation failed!\n");
         return 1;
@@ -32,7 +30,6 @@ int main() {
     newNode->next = NULL;
     newNode->prev = NULL;
 
-    // Free memory when done
     free(newNode);
 
     return 0;

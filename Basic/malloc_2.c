@@ -1,23 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h> // Required for dynamic memory functions
+#include <stdlib.h> 
 
 int main() {
-    int *ptr = (int *)malloc(5 * sizeof(int)); // Allocates memory for 3 integers
+    int *ptr = (int *)malloc(5 * sizeof(int));
 
-    if (ptr == NULL) { // Check if memory allocation succeeded
+    if (ptr == NULL) { 
         printf("Memory allocation failed.\n");
         return 1;
     }
 
     for (int i = 0; i < 5; i++) {
-        ptr[i] = i + 1; // Assign values
+        ptr[i] = i + 1; 
     }
 
     for (int i = 0; i < 5; i++) {
-        printf("Value at ptr[%d]: %d\n", i, ptr[i]); // Access values
+        printf("Value at ptr[%d]: %d\n", i, ptr[i]);
     }
 
-    free(ptr); // Free allocated memory
+    free(ptr); 
 
     return 0;
 }

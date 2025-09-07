@@ -19,10 +19,6 @@ int main() {
         case 5:
             printf("Friday\n");
             break;
-        case 6:
-        case 7:  // Handling multiple cases together
-            printf("Weekend\n");
-            break;
         default:
             printf("Invalid day\n");
     }

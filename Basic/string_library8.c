@@ -3,6 +3,7 @@
 
 int main() {
     char str[] = "Hello,World,Programming";
+    
     char *token = strtok(str, ","); // Split by comma
 
     while (token != NULL) {

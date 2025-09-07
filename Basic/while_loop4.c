@@ -6,7 +6,7 @@ int main() {
     while (1) {  // Infinite loop
         count++;
         printf("Count: %d\n", count);
-        if (count >= 5) {  // Exit condition
+        if (count >= 5) { 
             break;
         }
     }

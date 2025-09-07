@@ -1,14 +1,11 @@
 #include <stdio.h>
-#include "config.h"
+#include "myfile2.h"
 
 int main() {
-    printf("Version: %s\n", VERSION);
+    double radius = 5.0;
+    double length = 10.0, width = 4.0;
     
-    #if ENABLE_FEATURE
-        printf("Feature is enabled!\n");
-    #else
-        printf("Feature is disabled.\n");
-    #endif
-
+    printf("Circle Area: %.2f\n", calculateCircleArea(radius));
+    printf("Rectangle Area: %.2f\n", calculateRectangleArea(length, width));
     return 0;
 }

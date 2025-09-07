@@ -1,16 +1,13 @@
 #include <stdio.h>
 
-char getGrade(int score) {
-    if (score >= 90) 
-       return 'A';
-    else if (score >= 80) 
-        return 'B';
-    else 
-        return 'F';
+// return float, two float parameters
+float divide(float a, float b) {
+    return a / b;
 }
 
 int main() {
-    char grade = getGrade(85);
-    printf("Grade: %c\n", grade);
+    float result = divide(10.0, 4.0);
+    
+    printf("Quotient: %.2f\n", result);
     return 0;
 }

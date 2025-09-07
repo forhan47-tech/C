@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    int a, b, c;
+    int x = 0, y = 10;
 
-    c = (a = 5, b = 10, a + b); // Multiple assignments and addition
-    printf("a = %d, b = %d, c = %d\n", a, b, c);
+    while (x <= y && (x++, y--)) { // Increment x and decrement y during the condition evaluation
+        printf("x = %d, y = %d\n", x, y);
+    }
 
     return 0;
 }

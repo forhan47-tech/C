@@ -1,27 +1,24 @@
 #include <stdio.h>
 
-// Define union
-union Data {
-    int id;
-    float salary;
+union Result {
+    int code;
+    char grade;
 };
 
-// Function to modify union
-void modify(union Data *e) {
-    e->salary = 75000.50;  // Modify union data using pointer
+union Result getResult(int marks) {
+    union Result r;
+    
+    if (marks >= 90)
+        r.grade = 'A';
+    else
+        r.code = 0;  
+
+    return r;
 }
 
 int main() {
-    union Data employee;
-    employee.id = 105;
-    
-    printf("Before Modification: ID = %d\n", employee.id);
-    
-    // Passing union by reference
-    modify(&employee);
+    union Result res = getResult(95);
 
-    printf("After Modification: Salary = %.2f\n", employee.salary);
-
+    printf("Grade: %c\n", res.grade);  
     return 0;
 }
-

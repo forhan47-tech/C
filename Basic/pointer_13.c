@@ -1,11 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int num = 100;
-    int *ptr = &num;        // Pointer to num
-    int **ptr2 = &ptr;      // Pointer to a pointer
+    int arr = 10, b = 20;
+    
+    int *ptr1 = &a; 
+    int *ptr2 = &b; 
 
-    printf("Value of num: %d\n", **ptr2);    // Access value using pointer to pointer
-    printf("Address of num: %p\n", ptr2); // Print address of pointer to pointer
+    if (ptr1 < ptr2) {
+        printf("ptr1 point to memory location less than ptr2.\n");
+    }
+
+    if (ptr2 > ptr1) {
+        printf("ptr2 point to memory location is greater than ptr1.\n");
+    }
+
     return 0;
 }

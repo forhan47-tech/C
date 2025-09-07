@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include "myfile.h" // Include the header file to use the functions
+#include "myfile1.h" // Include the header file
 
 int main() {
-    greet();  // Function call
+    greet();  // Call the function from the header file
     return 0;
 }

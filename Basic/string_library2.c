@@ -4,8 +4,7 @@
 int main() {
     char str[] = "Hello, World!";
     
-    // Calculate the length of the string
-    size_t length = strlen(str);
+    size_t length = strlen(str); // Calculate length
     
     printf("The length of the string is: %lu\n", length);
     

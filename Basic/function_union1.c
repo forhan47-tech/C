@@ -16,7 +16,7 @@ void printData(union Data d) {
 int main() {
     union Data d;
     
-    strcpy(d.str, "NAIMUDDIN");  // Only str is valid now
-    printData(d);                // Pass by value
+    strcpy(d.str, "NAIMUDDIN"); 
+    printData(d);                
     return 0;
 }

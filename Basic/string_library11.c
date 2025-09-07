@@ -4,8 +4,7 @@
 int main() {
     char str[] = "HelloWorld";
     
-    // Overlapping memory regions
-    memmove(str + 5, str, 5);
+    memmove(str + 5, str, 5); // overlapping copy
 
     printf("Updated String: %s\n", str);
     return 0;

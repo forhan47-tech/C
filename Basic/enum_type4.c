@@ -1,9 +1,7 @@
 #include <stdio.h>
 
 enum Days {
-    MONDAY,   
-    TUESDAY,  
-    WEDNESDAY 
+    MONDAY, TUESDAY, WEDNESDAY 
 };
 
 int main() {

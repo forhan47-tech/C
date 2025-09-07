@@ -12,9 +12,9 @@ void updateData(union Data *d) {
 
 int main() {
     union Data d;
-    
-    strcpy(d.str, "NAIMUDDIN");  // Overwritten by updateData
-    updateData(&d);              // Pass by reference
+    strcpy(d.str, "NAIMUDDIN");  
+
+    updateData(&d);         
     printf("Updated Integer: %d\n", d.i);
     return 0;
 }

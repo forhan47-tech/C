@@ -2,14 +2,14 @@
 
 int main() {
     int a = 10, b = 20;
-    const int *ptr = &a; // p points to 'a'
 
-    printf("Value of a: %d\n", *ptr); // Outputs: 10
+    const int *ptr = &a; 
+    printf("Value of a: %d\n", *ptr);
 
-    // *ptr = 15; // ❌ ERROR: Cannot modify value through 'p'
+    // *ptr = 15; // ❌ ERROR: Cannot modify value through 'ptr'
 
-    ptr = &b; // ✅ Allowed: Can change pointer to another integer
-    printf("Value of b: %d\n", *ptr); // Outputs: 20
+    ptr = &b; // ✅ Allowed: Can change pointer itself
+    printf("Value of b: %d\n", *ptr); 
 
     return 0;
 }

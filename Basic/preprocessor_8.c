@@ -1,14 +1,9 @@
 #include <stdio.h>
 
-#define TEMP 25
+#define DEBUG_PRINT(msg) \
+    printf("DEBUG - File: %s, Line: %d, Date: %s, Time: %s, Message: %s\n", __FILE__, __LINE__, __DATE__, __TIME__, msg)
 
 int main() {
-    printf("TEMP before undef: %d\n", TEMP);
-
-    // Now we undefine TEMP
-    #undef TEMP
-
-    // Trying to use TEMP now would cause a compiler error
-    // printf("TEMP after undef: %d\n", TEMP); // ❌ This will fail
+    DEBUG_PRINT("This is a debug message.");
     return 0;
 }

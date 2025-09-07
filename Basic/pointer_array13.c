@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    int arr[] = {1, 2, 3, 4, 5};
+    int arr[3] = {7, 8, 9};
+    int (*ptr)[3] = &arr;
 
-    printf("Array in reverse order:\n");
-    for (int *ptr = arr + 4; ptr >= arr; ptr--) {
-        printf("%d ", *ptr);  // Dereference pointer to get the value
+    for (int i = 0; i < 3; i++) {
+        printf("(*ptr)[%d] = %d\n", i, (*ptr)[i]);
     }
 
     return 0;

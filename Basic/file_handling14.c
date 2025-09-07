@@ -1,27 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    FILE *source, *destination;
-    char ch;
+    FILE *fp = fopen("lines.txt", "w");
+    
+    if (fp == NULL) return 1;
 
-    source = fopen("source.txt", "r");
-    destination = fopen("destination.txt", "w");
-
-    if (source == NULL || destination == NULL) {
-        printf("Error opening files.\n");
-        return 1;
+    for (int i = 1; i <= 5; i++) {
+        char line[50];
+        sprintf(line, "This is line number %d\n", i);
+        fputs(line, fp);
     }
 
-    // Copy contents character by character
-    while ((ch = fgetc(source)) != EOF) {
-        fputc(ch, destination);
-    }
-
-    printf("File copied successfully!\n");
-
-    fclose(source);
-    fclose(destination);
-
+    fclose(fp);
     return 0;
 }
-

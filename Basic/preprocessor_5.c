@@ -1,18 +1,13 @@
 #include <stdio.h>
 
-#define FEATURE_ENABLED  
+#define MODE "DEV"
+
+#ifdef MODE
+    #undef MODE
+    #define MODE "PROD"
+#endif
 
 int main() {
-    #ifdef FEATURE_ENABLED
-        printf("Feature enabled.\n");
-    #endif
-
-    #ifndef DISABLED_FEATURE
-        printf("Feature not disabled.\n");
-    #endif
-
-    printf("Program execution complete.\n");
-
+    printf("Application running in %s mode\n", MODE);
     return 0;
 }
-

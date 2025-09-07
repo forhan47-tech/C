@@ -9,7 +9,7 @@ void checkPositive(int num) {
 }
 
 int main() {
-    checkPositive(-5); // Outputs: Negative number detected.
-    checkPositive(10); // Outputs: Number is positive.
+    checkPositive(-5); 
+    checkPositive(10); 
     return 0;
 }

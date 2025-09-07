@@ -2,7 +2,8 @@
 #include <stdbool.h>
 
 int main() {
-    int age = 18;
+    int age = 16;
+
     bool isEligible = (age >= 18);  // Evaluate eligibility using Boolean
 
     if (isEligible) {

@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    char str[] = "Hello"; // String stored as a character array
-    char *ptr = str;      // Pointer to first character
+    char *str = "Hello, NAIMUDDIN!";
 
-    printf("First character: %c\n", *ptr);
-    printf("Second character: %c\n", *(ptr + 1));
+    printf("String: %s\n", str);
+    printf("First character: %c\n", *str);
 
     return 0;
 }

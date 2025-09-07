@@ -1,11 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    double large = 1.2e6;    // 1.2 × 10⁶ = 1200000
-    double small = 1.2e-6;   // 1.2 × 10⁻⁶ = 0.0000012
+    float f = 3.14159f;            
+    double d = 2.718281828459045;  
 
-    printf("Large value: %e\n", large); // Scientific notation
-    printf("Small value: %e\n", small);
+    // Scientific notation
+    printf("Float (scientific): %e\n", f);  
+    printf("Double (scientific): %e\n", d); 
+
+    // Shortest representation
+    printf("Float (shortest): %g\n", f);   
+    printf("Double (shortest): %g\n", d);  
 
     return 0;
 }

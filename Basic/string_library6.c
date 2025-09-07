@@ -3,7 +3,9 @@
 
 int main() {
     char str[] = "Hello, World!";
-    char *ptr = strchr(str, 'W');
+
+    char *ptr = strchr(str, 'W'); // Find character
+
     if (ptr != NULL) {
         printf("Character found at position: %ld\n", ptr - str);
     } else {

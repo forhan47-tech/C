@@ -1,12 +1,13 @@
 #include <stdio.h>
 
-void greet() {
-    printf("Hello, world!\n");
-}
-
 int main() {
-    void (*func_ptr)() = greet; // Pointer to the 'greet' function
-    func_ptr();                // Calls the function indirectly
+    int value = 5;
+    int *ptr = &value; 
+
+    (*ptr)++; // Incrementing the value through the pointer
+
+    printf("%d\n", value);  
+
     return 0;
 }
 

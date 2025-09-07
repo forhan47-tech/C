@@ -1,28 +1,14 @@
 #include <stdio.h>
 #include <math.h>
+#define PI 3.14159265
 
 int main() {
-    double a = 4.0, b = 3.0, c = 2.0;
+    double angle = 45.0;
+    double rad = angle * PI / 180.0;
 
-    // Using pow: Compute a^c
-    double power = pow(a, c);
-    printf("a raised to the power c is %.2f\n", power);
-
-    // Using sqrt: Compute square root of a
-    double square_root = sqrt(a);
-    printf("Square root of a is %.2f\n", square_root);
-
-    // Using fmod: Calculate remainder of a divided by b
-    double remainder = fmod(a, b);
-    printf("Remainder of a divided by b is %.2f\n", remainder);
-
-    // Using cbrt: Compute cube root of a
-    double cube_root = cbrt(a);
-    printf("Cube root of a is %.2f\n", cube_root);
-
-    // Using hypot: Compute hypotenuse of sides b and c
-    double hypotenuse = hypot(b, c);
-    printf("Hypotenuse of sides b and c is %.2f\n", hypotenuse);
+    printf("sin(%.1f°) = %.4f\n", angle, sin(rad));
+    printf("cos(%.1f°) = %.4f\n", angle, cos(rad));
+    printf("tan(%.1f°) = %.4f\n", angle, tan(rad));
 
     return 0;
 }

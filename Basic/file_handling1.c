@@ -1,17 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    // Open the file in read, write, append, read+write modes("r", "w", "a", "r+", "w+", "a+")
-    FILE *fptr = fopen("example.txt", "r");
+    FILE *fptr = fopen("example.txt", "r"); // Attempt to open a file in read mode
 
-    // Check if the file was opened successfully
     if (fptr == NULL) {
         perror("Error: Unable to open file.");
         return 1;
     }
 
-    // Close the file
-    fclose(fptr);
+    fclose(fptr); // Close the file
 
     printf("File opened and closed successfully.\n");
     return 0;

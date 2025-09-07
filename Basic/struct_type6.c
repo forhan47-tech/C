@@ -13,7 +13,7 @@ int main() {
     scanf("%d", &s.roll);
 
     printf("Enter name: ");
-    scanf("%s", s.name);  // Avoids spaces; use fgets for full names
+    scanf("%s", s.name); 
 
     printf("Enter marks: ");
     scanf("%f", &s.marks);

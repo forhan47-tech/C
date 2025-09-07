@@ -1,12 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    int arr[] = {1, 2, 3, 4, 5};
-    int size = sizeof(arr) / sizeof(arr[0]);
+    int a, b, c;
 
-    for (int i = 0, j = size - 1; i <= j; i++, j--) {
-        printf("arr[%d] = %d, arr[%d] = %d\n", i, arr[i], j, arr[j]);
-    }
+    c = (a = 5, b = 10, a + b); // Multiple assignments and addition
+    printf("a = %d, b = %d, c = %d\n", a, b, c);
 
     return 0;
 }

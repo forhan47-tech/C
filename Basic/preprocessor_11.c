@@ -1,15 +1,5 @@
-#include <stdio.h>
+#pragma once
 
-#define DEBUG  // Comment this line to disable debug output
-
-int main() {
-    int score = 42;
-
-    #ifdef DEBUG
-        printf("Debug: score = %d\n", score);
-    #else
-        printf("Score recorded.\n");
-    #endif
-
-    return 0;
-}
+#define MAX_USERS 100
+#define APP_NAME "MyApp"
+#define VERSION "1.0.0"

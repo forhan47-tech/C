@@ -3,9 +3,15 @@
 #include <time.h>
 
 int main() {
-    srand(time(NULL));  // Seed the random number generator
+    int lower = 10, upper = 50;
+
+    srand(time(NULL));
+
+    // Generate and print 5 random numbers within the range
     for (int i = 0; i < 5; i++) {
-        printf("%d\n", rand());
+        int num = rand() % (upper - lower + 1) + lower;
+        printf("Random number %d: %d\n", i + 1, num);
     }
+
     return 0;
 }

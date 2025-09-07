@@ -1,16 +1,14 @@
 #include <stdio.h>
 
-void calculate(int a, int b, int *sum, int *product) {
-    *sum = a + b;
-    *product = a * b;
+int x = 5;  // Global variable
+
+void change() {
+    x = 100; 
+    printf("Inside function: x = %d\n", x);
 }
 
 int main() {
-    int x = 5, y = 3, sum, product;
-
-    calculate(x, y, &sum, &product);
-    printf("Sum: %d, Product: %d\n", sum, product);
-
+    change();
+    printf("Outside function: x = %d\n", x);
     return 0;
 }
-

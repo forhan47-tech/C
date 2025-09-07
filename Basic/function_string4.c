@@ -1,20 +1,16 @@
 #include <stdio.h>
 
-// Function to modify string
-void convertToUppercase(char str[]) {
-    for (int i = 0; str[i] != '\0'; i++) {
-        if (str[i] >= 'a' && str[i] <= 'z') {
-            str[i] -= 32;  // Convert lowercase to uppercase
-        }
-    }
+void changeString(char **str) {
+    *str = "Modified String"; 
 }
 
 int main() {
-    char text[] = "hello world";
+    char *str = "Original String";
 
-    convertToUppercase(text);  // Modify string inside function
-    printf("Uppercase: %s\n", text);
+    printf("Before: %s\n", str);
 
+    changeString(&str);
+
+    printf("After: %s\n", str);
     return 0;
 }
-

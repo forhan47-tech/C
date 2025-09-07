@@ -1,10 +1,12 @@
 #include <stdio.h>
 
 int main() {
-    int a = 0, b = 1, c = 0;
+    int i = 0, j = 10;
 
-    c = (a++, b++, a + b); // Increment a, b, and calculate a + b
-    printf("a = %d, b = %d, c = %d\n", a, b, c);
+    while (i < 5) {
+        printf("i = %d, j = %d\n", i, j);
+        i++, j--; // Increment i and decrement j in one statement using the comma operator
+    }
 
     return 0;
 }

@@ -1,22 +1,25 @@
 #include <stdio.h>
 
 int main() {
-    int x = 2; // Initialize x with the value 2
+    char grade = 'B';
 
-    // Switch statement to handle cases
-    switch (x) {
-        case 1:
-            printf("Case 1\n");
-            // No break, so it falls through to the next case
-        case 2:
-            printf("Case 2\n");
-            // No break, so it falls through to the next case
-        case 3:
-            printf("Case 3\n");
-            // No break, so it falls through to the default case
+    switch (grade) {
+        case 'A':
+            printf("Excellent!\n");
+            break;
+        case 'B':
+            printf("Good job!\n");
+            break;
+        case 'C':
+            printf("You passed.\n");
+            break;
+        case 'D':
+            printf("Try harder next time.\n");
+            break;
         default:
-            printf("Default\n");
+            printf("Invalid grade.\n");
     }
 
     return 0;
 }
+

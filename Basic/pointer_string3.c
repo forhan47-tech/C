@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    char *strArr[] = {"Hello", "World", "C"};
-    char **ptr = strArr; // Pointer to pointer
+    char *str = "Pointers Rock!";
 
-    printf("Second string: %s\n", ptr[1]); // Output: World
-
+    while (*str != '\0') {
+        printf("%c ", *str);
+        str++;  // Move to next character
+    }
     return 0;
 }

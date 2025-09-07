@@ -1,16 +1,10 @@
 #include <stdio.h>
 
-void firstFunction() {
-    printf("Executing: %s\n", __func__);
-}
-
-void secondFunction() {
-    printf("Executing: %s\n", __func__);
-}
+#ifndef TARGET_OS
+    #error "TARGET_OS must be defined. Use -DTARGET_OS=\"Linux\" when compiling."
+#endif
 
 int main() {
-    printf("Starting main function.\n");
-    firstFunction();   
-    secondFunction();  
+    printf("Running on %s\n", TARGET_OS);
     return 0;
 }

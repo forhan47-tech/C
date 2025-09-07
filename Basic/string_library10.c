@@ -5,7 +5,7 @@ int main() {
     char str1[] = "Hello";
     char str2[] = "Hellp";
 
-    int result = memcmp(str1, str2, 5);
+    int result = memcmp(str1, str2, 5);  // compare memory block
 
     if (result == 0)
         printf("Memory blocks are equal.\n");

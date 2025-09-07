@@ -16,6 +16,7 @@ int main() {
     Complex sum;
 
     addComplex(a, b, &sum);
+    
     printf("Sum: %.1f + %.1fi\n", sum.real, sum.imag);
     return 0;
 }
