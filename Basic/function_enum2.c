@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 typedef enum {
-    SUCCESS,
-    FAILURE
+    SUCCESS, FAILURE
 } Status;
 
 Status checkValue(int x) {

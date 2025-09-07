@@ -1,18 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    int numbers[5]; // Declare an integer array with 5 elements
+    int numbers[5]; 
 
-    printf("Enter 5 integers:\n");  // Input values into the array using scanf
+    printf("Enter 5 integers:\n");  
     for (int i = 0; i < 5; i++) {
         printf("Enter element %d: ", i + 1);
-        scanf("%d", &numbers[i]); // Read user input and store in the array
+        scanf("%d", &numbers[i]); 
     }
 
-    // Output the values of the array using printf
     printf("\nThe elements of the array are:\n");
     for (int i = 0; i < 5; i++) {
-        printf("Element %d: %d\n", i + 1, numbers[i]); // Print each element
+        printf("Element %d: %d\n", i + 1, numbers[i]); 
     }
 
     return 0;

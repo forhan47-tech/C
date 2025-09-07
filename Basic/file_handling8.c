@@ -1,18 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    FILE *fptr = fopen("data.txt", "r");
-    
-    if (fptr == NULL) {
-        printf("File not found!\n");
+    FILE *file = fopen("example.txt", "r");
+
+    if (file == NULL) {
+        perror("Error opening file");
         return 1;
     }
 
-    int ch;
-    while ((ch = fgetc(fptr)) != EOF) {
-        putchar(ch);
+    char line[256];
+    while (fgets(line, sizeof(line), file) != NULL) {
+        printf("%s", line);
     }
 
-    fclose(fptr);
+    fclose(file);
+
     return 0;
 }

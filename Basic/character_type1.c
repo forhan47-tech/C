@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    char ch = 'A';              // Single character
-    printf("Character: %c\n", ch);       // Prints the character 'A' 
+    char ch = 'A'; 
 
-    printf("ASCII value: %d\n", ch);     // Prints the ASCII value of 'A' (65)
+    printf("Character: %c\n", ch);      
+    printf("ASCII value: %d\n", ch);    
 
-    printf("Next character: %c\n", ch + 1); // Prints the next character 'B'
-    printf("Previous character: %c\n", ch - 1); // Prints the previous character '@'
+    printf("Next character: %c\n", ch + 1); 
+    printf("Previous character: %c\n", ch - 1);
     
     return 0;
 }

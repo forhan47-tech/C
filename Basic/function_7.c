@@ -1,14 +1,16 @@
 #include <stdio.h>
 
-void increment(int *num) {
-    (*num)++; 
+void modify(int *ptr) {
+    *ptr = 20; 
+
 }
 
 int main() {
-    int x = 10;
+    int num = 10;  
 
-    increment(&x);  
-    printf("After: %d\n", x);
+    modify(&num);  
+    printf("%d\n", num);  
 
     return 0;
 }
+

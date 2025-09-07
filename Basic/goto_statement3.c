@@ -1,17 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    int number;
+    int i = 1;
 
-    repeat:
-    printf("Enter a number (enter 0 to stop): ");
-    scanf("%d", &number);
+start:
+    printf("%d ", i);
+    i++;
+    if (i <= 10)
+        goto start; // loop simulation
 
-    if (number != 0) {
-        printf("You entered: %d\n", number);
-        goto repeat; // Repeats the prompt until 0 is entered
-    }
-
-    printf("Program terminated.\n");
     return 0;
 }

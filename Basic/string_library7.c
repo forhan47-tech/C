@@ -3,7 +3,9 @@
 
 int main() {
     char str[] = "Hello, World!";
-    char *ptr = strstr(str, "World");
+
+    char *ptr = strstr(str, "World"); // find substring
+    
     if (ptr != NULL) {
         printf("Substring found: %s\n", ptr);
     } else {

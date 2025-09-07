@@ -1,11 +1,12 @@
 #include <stdio.h>
 
 int main() {
-    int i = 0, j = 10;
+    int arr[] = {1, 2, 3, 4, 5};
+    
+    int size = sizeof(arr) / sizeof(arr[0]);
 
-    while (i < 5) {
-        printf("i = %d, j = %d\n", i, j);
-        i++, j--; // Increment i and decrement j in one statement using the comma operator
+    for (int i = 0, j = size - 1; i <= j; i++, j--) {
+        printf("arr[%d] = %d\narr[%d] = %d\n", i, arr[i], j, arr[j]);
     }
 
     return 0;

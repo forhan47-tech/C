@@ -1,12 +1,13 @@
 #include <stdio.h>
 
-void directRecursion(int n) {
-    if (n <= 0) return; // Base case
-    printf("%d ", n);
-    directRecursion(n - 1); // Recursive call
+void nonTailRecursion(int n) {
+    if (n == 0) return;
+    
+    nonTailRecursion(n - 1); // Recursive call happens first
+    printf("%d ", n); // Additional operation after recursion
 }
 
 int main() {
-    directRecursion(5);
+    nonTailRecursion(5);
     return 0;
 }

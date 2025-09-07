@@ -8,6 +8,12 @@ struct StatusFlags {
 
 int main() {
     struct StatusFlags flag = {1, 0, 7};
-    printf("Visible: %d, Active: %d, ErrorCode: %d\n", flag.isVisible, flag.isActive, flag.errorCode);
+
+    printf("Active: %u\n", flag.isActive);
+    printf("Visible: %u\n", flag.isVisible);
+    printf("Error Code: %u\n", flag.errorCode);
+
+    printf("Size of struct: %lu bytes\n", sizeof(flag));
+
     return 0;
 }

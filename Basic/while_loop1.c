@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    int num = 1; // Initialize variable
+    int num = 1; 
 
-    while (num <= 5) { // Condition
-        printf("%d\n", num); // Print the value of num
-        num++; // Increment num
+    while (num <= 5) { 
+        printf("%d\n", num); 
+        num++; 
     }
 
     return 0;

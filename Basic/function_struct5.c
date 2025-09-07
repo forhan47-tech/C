@@ -8,6 +8,7 @@ struct Student {
 
 struct Student getStudent() {
     struct Student s;
+
     printf("Enter roll: ");
     scanf("%d", &s.roll);
 
@@ -22,6 +23,7 @@ struct Student getStudent() {
 
 int main() {
     struct Student s1 = getStudent();
+    
     printf("\nRoll: %d, Name: %s, Marks: %.2f\n", s1.roll, s1.name, s1.marks);
     return 0;
 }

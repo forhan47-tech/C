@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 struct Value {
-    int type;  // 1 = int, 2 = float
+    int type;  
     union {
         int num;
         float decimal;

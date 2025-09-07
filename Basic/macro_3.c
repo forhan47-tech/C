@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-#define SQUARE(x) ((x) * (x))  // Macro to compute the square of a number
+#define SQUARE(x) ((x) * (x))  
 
 int main() {
     int num = 5;
-    int result = SQUARE(num);  // Expands to ((5) * (5)), which equals 25.
+    int result = SQUARE(num);  
 
     printf("The square of %d is %d\n", num, result);
 

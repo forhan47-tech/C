@@ -1,27 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    FILE *file;
-    char line[1024];
+    FILE *fptr = fopen("example.txt", "r");
 
-    file = fopen("output.txt", "w");
-
-    if (file == NULL) {
-        printf("Error opening file.\n");
+    if (fptr == NULL) {
+        perror("Error opening file");
         return 1;
     }
 
-    printf("Enter multiple lines (type 'exit' to stop):\n");
-
-    while (1) {
-        fgets(line, sizeof(line), stdin);
-        if (line[0] == 'e' && line[1] == 'x' && line[2] == 'i' && line[3] == 't') {  // Check for exit command
-            break;
-        }
-        fputs(line, file);
+    if (feof(fptr)) {
+        printf("\nReached end of file.\n");
     }
 
-    fclose(file);
-    printf("Lines written successfully to output.txt.\n");
+    fclose(fptr);
     return 0;
 }

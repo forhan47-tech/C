@@ -2,24 +2,14 @@
 #include <math.h>
 
 int main() {
-    double degrees = 45.0; 
-    double radians = degrees * (M_PI / 180.0);  // Convert degrees to radians
+    double x = 9.0, y = 2.0;
 
-    // Basic trigonometric functions
-    printf("Sine of 45°: %.2f\n", sin(radians));  // Computes sine of the angle
-    printf("Cosine of 45°: %.2f\n", cos(radians));  // Computes cosine of the angle
-    printf("Tangent of 45°: %.2f\n", tan(radians));  // Computes tangent of the angle
-
-    // Inverse trigonometric functions
-    printf("Arcsine of 0.707: %.2f radians\n", asin(0.707));  // Computes arcsine
-    printf("Arccosine of 0.707: %.2f radians\n", acos(0.707));  // Computes arccosine
-    printf("Arctangent of 0.707: %.2f radians\n", atan(0.707));  // Computes arctangent
-
-    // Hyperbolic functions
-    double value = 1.0;  // Input for hyperbolic functions
-    printf("Hyperbolic sine of 1.0: %.2f\n", sinh(value));  // Computes sinh(x)
-    printf("Hyperbolic cosine of 1.0: %.2f\n", cosh(value));  // Computes cosh(x)
-    printf("Hyperbolic tangent of 1.0: %.2f\n", tanh(value));  // Computes tanh(x)
+    printf("sqrt(%.1f) = %.2f\n", x, sqrt(x));
+    printf("pow(%.1f, %.1f) = %.2f\n", x, y, pow(x, y));
+    printf("cbrt(%.1f) = %.2f\n", x, cbrt(x));
+    printf("fabs(-%.1f) = %.2f\n", x, fabs(-x));
+    printf("fmod(%.1f, %.1f) = %.2f\n", x, y, fmod(x, y));
+    printf("hypot(%.1f, %.1f) = %.2f\n", x, y, hypot(x, y)); 
 
     return 0;
 }

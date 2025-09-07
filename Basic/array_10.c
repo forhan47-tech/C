@@ -1,16 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    const int numbers[5] = {10, 20, 30, 40, 50};
+    int arr[] = {2, 4, 6, 8};
+    int i = 0;
 
-    // Print the elements of the constant array
-    printf("Elements of the constant array:\n");
-    for (int i = 0; i < 5; i++) {
-        printf("numbers[%d] = %d\n", i, numbers[i]);
+    while (i < 4) {
+        printf("Element %d: %d\n", i, arr[i]);
+        i++;
     }
-
-    // Attempt to modify an element (this will cause a compilation error)
-    // numbers[2] = 35; // Uncommenting this line will result in an error
 
     return 0;
 }

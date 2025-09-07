@@ -1,16 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            if (i == 1 && j == 1) {
-                goto exit_loops; // Exit both loops
-            }
-            printf("i = %d, j = %d\n", i, j);
-        }
-    }
+    int n = 26;
 
-exit_loops:
-    printf("Exited the nested loops.\n");
+    if (n % 2 == 0)
+        goto even;
+    else
+        goto odd;
+
+even:
+    printf("%d is even\n", n);
+    return 0;
+
+odd:
+    printf("%d is odd\n", n);
     return 0;
 }

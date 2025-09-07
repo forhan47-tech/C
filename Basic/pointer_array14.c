@@ -1,11 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    int arr[3] = {1, 2, 3};
-    int (*ptr)[3] = &arr; // Pointer to entire array
+    int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}};
+    int *ptr = &matrix[0][0]; // Pointer to the first element
 
-    printf("First element: %d\n", (*ptr)[0]);
-    printf("Second element: %d\n", (*ptr)[1]);
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d ", *(ptr + i * 3 + j)); 
+        }
+        printf("\n");
+    }
 
     return 0;
 }
+

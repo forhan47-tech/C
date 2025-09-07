@@ -1,10 +1,16 @@
 #include <stdio.h>
 
-void displayDouble(double num) {
-    printf("Double value: %.2f\n", num);
+// return char, one integer parameter
+char getGrade(int score) {
+    if (score >= 90) 
+       return 'A';
+    else 
+        return 'F';
 }
 
 int main() {
-    displayDouble(5); 
+    char grade = getGrade(85);
+    
+    printf("Grade: %c\n", grade);
     return 0;
 }

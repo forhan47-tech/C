@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define VERSION 2
+#define VERSION 2 // Define macro
 
 #if VERSION == 1
     #define FEATURE "Basic Mode"

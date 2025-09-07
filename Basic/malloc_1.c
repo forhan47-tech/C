@@ -4,12 +4,12 @@
 int main() {
     int *ptr = (int*)malloc(sizeof(int));  // Allocate memory
 
-    if (ptr == NULL) {  // Check if allocation was successful
+    if (ptr == NULL) {  
         printf("Memory allocation failed!\n");
-        return 1;  // Exit if allocation failed
+        return 1;  
     }
 
-    *ptr = 50;  // Assign value
+    *ptr = 50;  
     printf("Allocated value: %d\n", *ptr);
 
     free(ptr);  // Release memory

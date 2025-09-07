@@ -1,16 +1,16 @@
 #include <stdio.h>
 
-// Function using a local variable
-void showMessage() {
-    int x = 5; // x is local to showMessage
-    printf("Inside showMessage: x = %d\n", x);
+void calculate(int a, int b, int *sum, int *product) {
+    *sum = a + b;
+    *product = a * b;
 }
 
 int main() {
-    showMessage();
+    int x = 5, y = 3, sum, product;
 
-    // Trying to access x here will produce a compilation error
-    // printf("Outside showMessage: x = %d\n", x); // ❌ Uncommenting this will trigger an error
+    calculate(x, y, &sum, &product);
+    printf("Sum: %d, Product: %d\n", sum, product);
 
     return 0;
 }
+

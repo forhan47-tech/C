@@ -4,9 +4,9 @@
 int main() {
     bool a = true, b = false;
 
-    printf("Logical AND: %d\n", a && b);  // False (0)
-    printf("Logical OR: %d\n", a || b);   // True (1)
-    printf("Logical NOT: %d\n", !a);      // False (0)
+    printf("Logical AND: %d\n", a && b);  
+    printf("Logical OR: %d\n", a || b);   
+    printf("Logical NOT: %d\n", !a);     
 
     return 0;
 }

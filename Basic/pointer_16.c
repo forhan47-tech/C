@@ -1,12 +1,16 @@
 #include <stdio.h>
 
-int add(int a, int b) {
-    return a + b;
-}
-
 int main() {
-    int (*func_ptr)(int, int) = add;  // Declare a pointer to a function
-    int result = func_ptr(5, 3);      // Call the function via the pointer
-    printf("Result: %d\n", result);   // Prints 8
+    int num = 100;
+    int *ptr = &num;
+    int **pptr = &ptr;
+
+    // Print value
+    printf("Value of num: %d\n", **pptr);
+
+    // Print address
+    printf("Address of num: %p\n", *pptr);
+    printf("Address of ptr: %p\n", pptr);
+
     return 0;
 }

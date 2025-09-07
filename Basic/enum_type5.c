@@ -1,6 +1,8 @@
 #include <stdio.h>
 
-enum Gender { MALE, FEMALE };
+enum Gender { 
+    MALE, FEMALE 
+};
 
 struct Person {
     char name[50];
@@ -9,6 +11,7 @@ struct Person {
 
 int main() {
     struct Person p = {"NAIMUDDIN", MALE};
-    printf("Name: %s, Gender: %s\n", p.name, p.gender == MALE ? "Male" : "Female");
+    
+    printf("Name: %s\nGender: %s\n", p.name, p.gender == MALE ? "Male" : "Female");
     return 0;
 }

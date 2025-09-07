@@ -1,12 +1,23 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-// Function to return a greeting message
-char* getMessage() {
-    return "Hello, User!"; // Return a string literal
+char* createString() {
+    char *str = (char*)malloc(50 * sizeof(char));  
+    
+    if (str == NULL) return NULL;  
+
+    printf("Enter a string: ");
+    fgets(str, 50, stdin);
+
+    return str;  
 }
 
 int main() {
-    char* message = getMessage();
-    printf("%s\n", message);
-    return 0; 
+    char *text = createString(); 
+
+    printf("Stored string: %s", text);
+
+    free(text); 
+    return 0;
 }
+

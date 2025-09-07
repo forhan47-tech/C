@@ -1,17 +1,22 @@
 #include <stdio.h>
 
-// Function to print a 2D array
-void printMatrix(int matrix[][3], int rows) {
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < 3; j++) {  // Number of columns must match
-            printf("%d ", matrix[i][j]);
-        }
-        printf("\n");
+void modifyArray(int* arr, int size) {
+    for (int i = 0; i < size; i++) {
+        arr[i] *= 2; 
     }
 }
 
 int main() {
-    int matrix[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};  // Declare a 3x3 matrix
-    printMatrix(matrix, 3);  // Pass the matrix and the number of rows
+    int numbers[] = {1, 2, 3, 4, 5};
+    int size = sizeof(numbers) / sizeof(numbers[0]); 
+
+    modifyArray(numbers, size);
+
+    printf("Modified array: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", numbers[i]);
+    }
+    printf("\n");
+
     return 0;
 }

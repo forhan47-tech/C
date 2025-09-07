@@ -1,12 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    printf("Before the jump.\n");
-    goto label; // Jump to the label
+    int n = 0;
 
-    printf("This line will be skipped.\n");
+    if (n == 0)
+        goto jump_here; // jump to label
 
-label:
-    printf("After the jump.\n");
+    printf("You entered: %d\n", n);
+
+jump_here: 
+    printf("Exiting the program.\n");
     return 0;
 }

@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    int x = 0, y = 10;
+    int a = 5, b = 10, c;
 
-    while (x <= y && (x++, y--)) { // Increment x and decrement y during the condition evaluation
-        printf("x = %d, y = %d\n", x, y);
-    }
+    c = (a > b ? (a = a + b, b = b + 1) : (b = b - a, a = a - 1)); // Conditional logic with comma
+    printf("a = %d, b = %d, c = %d\n", a, b, c);
 
     return 0;
 }

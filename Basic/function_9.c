@@ -1,15 +1,16 @@
 #include <stdio.h>
 
-void counterFunction() {
-    static int count = 0;  // Static local variable
-    count++;
-    printf("Function called %d times.\n", count);
+int isEven(int num) {
+    return num % 2 == 0;
 }
 
 int main() {
-    for (int i = 0; i < 3; i++) {  
-        counterFunction();
-    }
+    int n = 7;
 
+    if (isEven(n))
+        printf("%d is even\n", n);
+    else
+        printf("%d is odd\n", n);
+    
     return 0;
 }

@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-// Function to print a string
-void printString(char str[]) {
-    printf("String received: %s\n", str);
+void printString(char *str) {
+    printf("String: %s\n", str);
 }
 
 int main() {
-    char myString[] = "Hello, C!";
-    printString(myString);  
+    char myString[] = "Hello, world!";
+    
+    printString(myString);
     return 0;
 }
 

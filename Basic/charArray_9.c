@@ -1,13 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    char ch;
-    printf("Enter characters (press Enter to stop):\n");
+    char str[100];
 
-    // Read characters until newline ('\n') is encountered
-    while ((ch = getchar()) != '\n') {
-        printf("You entered: %c\n", ch);
+    printf("Enter text (Ctrl+D or EOF to stop):\n");
+
+    while (fgets(str, sizeof(str), stdin) != NULL) {  // Read until EOF
+        printf("You entered: %s", str);
     }
 
+    printf("Input ended.\n");
     return 0;
 }

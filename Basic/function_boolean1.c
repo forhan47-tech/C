@@ -7,6 +7,7 @@ bool isEven(int n) {
 
 int main() {
     bool result = isEven(4);
+    
     printf("Is even? %s\n", result ? "true" : "false");
     return 0;
 }

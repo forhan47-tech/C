@@ -13,7 +13,7 @@ int main() {
         for (int j = 0; j < 3; j++) {
             printf("%d ", matrix[i][j]);
         }
-        printf("\n");
+        printf("\n"); // move to the next row
     }
 
     return 0;

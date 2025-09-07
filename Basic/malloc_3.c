@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 int main() {
-    char *str = (char*)malloc(50 * sizeof(char));  // Allocate 50 characters
+    char *str = (char*)malloc(50 * sizeof(char)); 
 
-    if (str == NULL) {  // Check if memory allocation was successful
+    if (str == NULL) { 
         printf("Memory allocation failed!\n");
-        return 1;  // Exit if allocation failed
+        return 1;  
     }
 
     printf("Enter your name: ");
@@ -14,7 +14,7 @@ int main() {
 
     printf("Hello, %s", str);
 
-    free(str);  // Free allocated memory
+    free(str); 
 
     return 0;
 }

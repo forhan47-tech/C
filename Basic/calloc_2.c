@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main() {
-    char *str = (char*)calloc(20, sizeof(char));  // Allocate space for 20 characters
+    char *str = (char*)calloc(20, sizeof(char));  
 
     if (str == NULL) {
         printf("Memory allocation failed!\n");
@@ -10,11 +10,11 @@ int main() {
     }
 
     printf("Enter a string: ");
-    fgets(str, 20, stdin);  // Read string dynamically
+    fgets(str, 20, stdin);  
 
     printf("Stored string: %s", str);
 
-    free(str);  // Free allocated memory
+    free(str);  
 
     return 0;
 }

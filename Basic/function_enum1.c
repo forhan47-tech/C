@@ -1,9 +1,7 @@
 #include <stdio.h>
 
 typedef enum {
-    LOW = 1,
-    MEDIUM,
-    HIGH
+    LOW, MEDIUM, HIGH
 } Level;
 
 void printLevel(Level l) {

@@ -1,19 +1,23 @@
 #include <stdio.h>
 
 int main() {
-    int source[] = {1, 2, 3, 4, 5};
-    int destination[5];
+    int arr1[] = {1, 2, 3, 4, 5};  
+    int arr2[] = {6, 7, 8, 9, 10}; 
 
-    // Manual copy of array elements
-    for (int i = 0; i < 5; i++) {
-        destination[i] = source[i];
+    int size = sizeof(arr1) / sizeof(arr1[0]);  
+    int sum[size];  
+
+    // Perform addition
+    for (int i = 0; i < size; i++) {
+        sum[i] = arr1[i] + arr2[i]; 
     }
 
-    // Display copied array
-    printf("Copied Array: ");
-    for (int i = 0; i < 5; i++) {
-        printf("%d ", destination[i]);
+    printf("Sum of arrays:\n");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", sum[i]);
     }
+    printf("\n");
 
     return 0;
 }
+

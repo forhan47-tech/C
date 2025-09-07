@@ -1,14 +1,12 @@
 #include <stdio.h>
 
 int main() {
-    int arr[] = {10, 20, 30, 40};
-    int *start = &arr[0];
-    int *end = &arr[3];
-    
-    printf("Address of start: %p\n", start);
-    printf("Address of end: %p\n", end);
+    int a = 100, b = 200, c = 300;
+    int *arr[3] = {&a, &b, &c};
 
-    printf("Number of elements between start and end: %ld\n", end - start);  // Outputs 3
-    
+    for (int i = 0; i < 3; i++) {
+        printf("Value at arr[%d] = %d\n", i, *arr[i]);
+    }
+
     return 0;
 }

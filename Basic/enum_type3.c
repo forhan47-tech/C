@@ -1,6 +1,8 @@
 #include <stdio.h>
 
-enum TrafficLight { RED, YELLOW, GREEN };
+enum TrafficLight { 
+    RED, YELLOW, GREEN 
+};
 
 int main() {
     enum TrafficLight signal = YELLOW;

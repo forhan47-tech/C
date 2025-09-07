@@ -1,15 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            if (j == 2) {
-                break; // Exit the inner loop when j equals 2
-            }
-            printf("i = %d, j = %d\n", i, j);
-        }
-    }
+    int i = 0;
 
-    printf("Nested loops terminated.\n");
+    do {
+        if (i == 3) {
+            break; // Exit the loop when i equals 3
+        }
+        printf("i = %d\n", i);
+        i++;
+    } while (i < 10);
+
+    printf("Loop terminated.\n");
     return 0;
 }

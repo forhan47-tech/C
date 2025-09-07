@@ -6,7 +6,6 @@ struct Node {
     struct Node* next;
 };
 
-// Modified print function for circular list
 void printCircularList(struct Node* head) {
     if (head == NULL) return;
 

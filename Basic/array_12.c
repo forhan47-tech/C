@@ -1,15 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int arr[] = {10, -5, 20, -15, 30};
-    int size = sizeof(arr) / sizeof(arr[0]);
+    int source[] = {1, 2, 3, 4, 5};
+    int destination[5];
 
-    printf("Positive numbers in the array:\n");
-    for (int i = 0; i < size; i++) {
-        if (arr[i] < 0) {
-            continue; // Skip negative numbers
-        }
-        printf("%d\n", arr[i]);
+    // Manual copy of array elements
+    for (int i = 0; i < 5; i++) {
+        destination[i] = source[i];
     }
+
+    printf("Copied Array: ");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", destination[i]);
+    }
+
     return 0;
 }

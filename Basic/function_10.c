@@ -1,16 +1,12 @@
 #include <stdio.h>
 
-void greet() {
-    printf("Hello, World!\n");
-}
-
-void displayMessage() {
-    printf("This is a message.\n");
-    greet();  // Calling another function inside displayMessage()
+int max(int a, int b) {
+    return (a > b) ? a : b;
 }
 
 int main() {
-    displayMessage();  // Calls displayMessage(), which calls greet()
+    int x = 12, y = 9;
+    
+    printf("Max is: %d\n", max(x, y));
     return 0;
 }
-

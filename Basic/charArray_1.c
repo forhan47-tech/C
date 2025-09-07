@@ -1,17 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    char letters[5] = {'A', 'B', 'C', 'D', 'E'};  // Character array initialization
+    char letters[5] = {'A', 'B', 'C', 'D', 'E'};  
 
+    // access element
     printf("Value: %c\n ", letters[3]);
 
-    // Modifying an element in the array
-    letters[2] = 'Z';  // Change 'C' to 'Z'
-    printf("Modified Value: %c\n", letters[2]);  // Print the modified value
+    // Modifying an element
+    letters[2] = 'Z'; 
+    printf("Modified Value: %c\n", letters[2];
 
-    // Iterate through the array and print all elements
+    // print all elements
     for (int i = 0; i < 5; i++) {
-        printf("Element %d: %c\n", i, letters[i]);  // Print each element
+        printf("Element %d: %c\n", i, letters[i]); 
     }
     printf("\n");
 

@@ -8,6 +8,6 @@ struct Student {
 
 int main() {
     struct Student student1;
-    printf("Size of struct Student: %zu bytes\n", sizeof(student1));  // Output: Varies depending on member types
+    printf("Size of struct Student: %zu bytes\n", sizeof(student1)); 
     return 0;
 }

@@ -2,12 +2,12 @@
 
 int main() {
     int a = 10, b = 20;
-    int *const ptr = &a; // 'p' is a constant pointer to 'a'
 
-    printf("Value of a: %d\n", *ptr); // Outputs: 10
+    int *const ptr = &a; 
+    printf("Value of a: %d\n", *ptr); 
 
-    *ptr = 30; // ✅ Allowed: Can modify value at 'p'
-    printf("Modified value of a: %d\n", *ptr); // Outputs: 30
+    *ptr = 30; // ✅ Allowed: Can modify value at 'ptr'
+    printf("Modified value of a: %d\n", *ptr); 
 
     // ptr = &b; // ❌ ERROR: Cannot change pointer itself
 

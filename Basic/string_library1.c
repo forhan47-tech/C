@@ -3,7 +3,7 @@
 
 int main() {
     char src[] = "Hello, World!";
-    char dest[50]; // Make sure the destination array is large enough
+    char dest[50]; // Ensure sufficient space
 
     strcpy(dest, src); // Copy src into dest
 

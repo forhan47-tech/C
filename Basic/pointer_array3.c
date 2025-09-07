@@ -1,13 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    int arr[3] = {10, 20, 30}; // Array initialization
-    int *ptr = arr;            // Pointer pointing to first element of the array
+    int arr[] = {10, 20, 30, 40, 50};
+    int *ptr = &arr[4];  // Points to the last element
 
-    printf("First element: %d\n", *ptr);     // Outputs: 10 (first element)
-    printf("Second element: %d\n", *(ptr+1)); // Outputs: 20 (second element)
-    printf("Third element: %d\n", *(ptr+2));  // Outputs: 30 (third element)
+    printf("Starting at last element: %d\n", *ptr); 
+
+    ptr--;  // Move backward by 1 element
+    printf("After moving back: %d\n", *ptr);  
+
+    ptr -= 2;  // Move backward by 2 more elements
+    printf("After moving back two more elements: %d\n", *ptr); 
 
     return 0;
 }
-

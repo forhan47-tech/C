@@ -1,15 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    state1:
-    printf("State 1: Doing something...\n");
-    goto state2;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (i == 1 && j == 1) {
+                goto exit_loops; // Exit both loops
+            }
+            printf("i = %d, j = %d\n", i, j);
+        }
+    }
 
-    state2:
-    printf("State 2: Doing something else...\n");
-    goto state3;
-
-    state3:
-    printf("State 3: Process complete.\n");
+exit_loops:
+    printf("Exited the nested loops.\n");
     return 0;
 }

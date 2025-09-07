@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    int arr1[] = {2, 4, 6, 8, 10};  // First array initialized with values
-    int arr2[] = {3, 5, 7, 9, 11};  // Second array initialized with values
-    int size = sizeof(arr1) / sizeof(arr1[0]);  // Calculate array size dynamically
-    int product[size];  // Array to store the product
+    int arr1[] = {2, 4, 6, 8, 10};  
+    int arr2[] = {3, 5, 7, 9, 11};  
+
+    int size = sizeof(arr1) / sizeof(arr1[0]);  
+    int product[size];  
 
     // Perform multiplication
     for (int i = 0; i < size; i++) {
-        product[i] = arr1[i] * arr2[i];  // Element-wise multiplication
+        product[i] = arr1[i] * arr2[i]; 
     }
 
-    // Display result
     printf("Product of arrays:\n");
     for (int i = 0; i < size; i++) {
         printf("%d ", product[i]);

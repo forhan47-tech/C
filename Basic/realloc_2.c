@@ -14,11 +14,10 @@ int main() {
     printf("Enter a string: ");
     fgets(str, size, stdin);
 
-    // Resize if string is too small
     size += 20;
     str = (char*)realloc(str, size * sizeof(char));
 
-    strcat(str, " - dynamically resized!");  // Expand content
+    strcat(str, " - dynamically resized!");  
 
     printf("Updated: %s\n", str);
 

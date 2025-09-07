@@ -1,22 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    FILE *fptr = fopen("example.txt", "r");
-
+    FILE *fptr = fopen("data.txt", "w");
+    
     if (fptr == NULL) {
-        perror("Error opening file");
+        printf("Error opening file!\n");
         return 1;
     }
 
-    char ch;
-    while ((ch = fgetc(fptr)) != EOF) {
-        putchar(ch);
-    }
-
-    if (feof(fptr)) {
-        printf("\nReached end of file.\n");
-    }
-
+    fputs("Hello, File Handling!", fptr); // Write a string
     fclose(fptr);
     return 0;
 }

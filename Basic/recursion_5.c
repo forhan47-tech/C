@@ -1,20 +1,15 @@
 #include <stdio.h>
 
-void B(int n); // Forward declaration of B
-
-void A(int n) {
-    if (n <= 0) return;
-    printf("A: %d\n", n);
-    B(n - 1); // Calls another function
-}
-
-void B(int n) {
-    if (n <= 0) return;
-    printf("B: %d\n", n);
-    A(n - 2); // Calls original function
+void printSentence(int count) {
+    if (count <= 0) {
+        return;
+    }
+    printf("This is a recursive sentence.\n"); 
+    printSentence(count - 1);
 }
 
 int main() {
-    A(6);
+    int n = 5;  
+    printSentence(n);
     return 0;
 }

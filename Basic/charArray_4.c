@@ -6,7 +6,7 @@ int main() {
 
     printf("Characters using pointer:\n");
     while(str[i] != '\0') {
-        printf("%c ", str[i]); // Print each character using pointer notation
+        printf("%c ", str[i]);
         i++;
     }
     return 0;

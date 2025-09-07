@@ -1,12 +1,15 @@
 #include <stdio.h>
 
-void nonTailRecursion(int n) {
-    if (n == 0) return;
-    nonTailRecursion(n - 1); // Recursive call happens first
-    printf("%d ", n); // Additional operation after recursion
+int factorial(int n) {
+    if (n == 0) { 
+        return 1;
+    } else {
+    return n * factorial(n - 1); 
+    }
 }
 
 int main() {
-    nonTailRecursion(5);
+    int number = 5;
+    printf("Factorial of %d is %d\n", number, factorial(number));
     return 0;
 }
