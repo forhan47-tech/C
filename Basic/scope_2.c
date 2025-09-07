@@ -1,14 +1,17 @@
 #include <stdio.h>
 
-int x = 10; // Global variable: Accessible anywhere
+int x = 100;  // Global scope
 
 int main() {
-    printf("Global x: %d\n", x); 
+    int x = 10;  // Local scope (shadows global)
+    printf("Outer x = %d\n", x);  
 
-    if (1) {
-        int z = 30; // z is local to this block
-        printf("Inside if block - z: %d\n", z); // ✅ Works here
+    {
+        int x = 5;  // Block scope (shadows local)
+        printf("Inner block x = %d\n", x);  
     }
-    // printf("Outside if block - z: %d\n", z); // ❌ Compile error: 'z' is not declared here
+
+    printf("After block x = %d\n", x);  
+
     return 0;
 }
