@@ -1,12 +1,12 @@
 #include <stdio.h> 
 
 void example() {
-    int x = 5; // Variable in outer block
+    int x = 5; // Local scope
     {
-        int x = 10; 
-        printf("Inner block x: %d\n", x); // prints 10
+        int x = 10; // block scope
+        printf("Inner block x: %d\n", x); 
     }
-    printf("Outer block x: %d\n", x); // Prints 5
+    printf("Outer block x: %d\n", x); 
 }
 
 int main() {
