@@ -1,12 +1,14 @@
 #include <stdio.h>
 
-void greet() {
-    printf("Hello, world!\n");
-}
-
 int main() {
-    void (*func_ptr)() = greet; // Pointer to the 'greet' function
-    func_ptr();               
+    int arr[] = {10, 20, 30, 40, 50};
+    int *ptr = arr; // point first element
+    
+    printf("Array elements:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", *(ptr + i));
+    }
+    printf("\n");
+
     return 0;
 }
-

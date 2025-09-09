@@ -1,14 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    int a = 10;
-    const int *const ptr = &a; 
+    int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}};
+    int (*ptr)[3] = matrix; // Pointer to 2D array
 
-    printf("Value of a: %d\n", *ptr); 
-
-    // *ptr = 20; // ❌ ERROR: Cannot modify value through 'ptr'
-    // ptr = &b; // ❌ ERROR: Cannot change pointer itself
+    printf("First row, second element: %d\n", ptr[0][1]);
+    printf("Second row, third element: %d\n", ptr[1][2]);
 
     return 0;
 }
-

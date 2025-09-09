@@ -6,20 +6,16 @@ struct Node {
     struct Node* next;
 };
 
-// Function to reverse the list
-void reverseList(struct Node** head_ref) {
-    struct Node* prev = NULL;
-    struct Node* current = *head_ref;
-    struct Node* next = NULL;
-
-    while (current != NULL) {
-        next = current->next;    // Store next node
-        current->next = prev;    // Reverse current node's pointer
-        prev = current;          // Move prev forward
-        current = next;          // Move current forward
+// Search for a value in the list
+int search(struct Node* head, int key) {
+    int position = 0;
+    while (head != NULL) {
+        if (head->data == key)
+            return position;  // Found at this position
+        head = head->next;
+        position++;
     }
-
-    *head_ref = prev;  // New head of the reversed list
+    return -1; // Not found
 }
 
 // Print the list
@@ -32,7 +28,7 @@ void printList(struct Node* head) {
 }
 
 int main() {
-    // Create: 10 → 20 → 30
+    // Setup list: 10 → 20 → 30
     struct Node* head = malloc(sizeof(struct Node));
     struct Node* second = malloc(sizeof(struct Node));
     struct Node* third = malloc(sizeof(struct Node));
@@ -41,13 +37,15 @@ int main() {
     second->data = 20; second->next = third;
     third->data = 30; third->next = NULL;
 
-    printf("Original list:\n");
     printList(head);
 
-    reverseList(&head);
+    int target = 20;
+    int pos = search(head, target);
 
-    printf("Reversed list:\n");
-    printList(head);
+    if (pos != -1)
+        printf("Value %d found at position %d.\n", target, pos);
+    else
+        printf("Value %d not found in the list.\n", target);
 
     // Cleanup
     while (head != NULL) {

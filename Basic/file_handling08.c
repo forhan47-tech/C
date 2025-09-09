@@ -10,6 +10,7 @@ int main() {
 
     char name[20];
     int age;
+    
     fscanf(fptr, "%s %d", name, &age); // Read a string and an integer
     printf("Name = %s, Age = %d\n", name, age);
 

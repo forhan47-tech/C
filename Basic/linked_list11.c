@@ -6,17 +6,23 @@ struct Node {
     struct Node* next;
 };
 
-// Function to count the number of nodes
-int countNodes(struct Node* head) {
-    int count = 0;
-    while (head != NULL) {
-        count++;
-        head = head->next;
+// Function to reverse the list
+void reverseList(struct Node** head_ref) {
+    struct Node* prev = NULL;
+    struct Node* current = *head_ref;
+    struct Node* next = NULL;
+
+    while (current != NULL) {
+        next = current->next;    // Store next node
+        current->next = prev;    // Reverse current node's pointer
+        prev = current;          // Move prev forward
+        current = next;          // Move current forward
     }
-    return count;
+
+    *head_ref = prev;  // New head of the reversed list
 }
 
-// Function to print the list
+// Print the list
 void printList(struct Node* head) {
     while (head != NULL) {
         printf("%d → ", head->data);
@@ -26,7 +32,7 @@ void printList(struct Node* head) {
 }
 
 int main() {
-    // Sample list: 10 → 20 → 30
+    // Create: 10 → 20 → 30
     struct Node* head = malloc(sizeof(struct Node));
     struct Node* second = malloc(sizeof(struct Node));
     struct Node* third = malloc(sizeof(struct Node));
@@ -35,11 +41,13 @@ int main() {
     second->data = 20; second->next = third;
     third->data = 30; third->next = NULL;
 
-    printf("Linked list:\n");
+    printf("Original list:\n");
     printList(head);
 
-    int total = countNodes(head);
-    printf("Total number of nodes = %d\n", total);
+    reverseList(&head);
+
+    printf("Reversed list:\n");
+    printList(head);
 
     // Cleanup
     while (head != NULL) {

@@ -1,16 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    FILE *fp = fopen("lines.txt", "w");
-    
-    if (fp == NULL) return 1;
+    FILE *fptr = fopen("example.txt", "r");
 
-    for (int i = 1; i <= 5; i++) {
-        char line[50];
-        sprintf(line, "This is line number %d\n", i);
-        fputs(line, fp);
+    if (fptr == NULL) {
+        perror("Error opening file");
+        return 1;
     }
 
-    fclose(fp);
+    if (feof(fptr)) {
+        printf("\nReached end of file.\n");
+    }
+
+    fclose(fptr);
     return 0;
 }

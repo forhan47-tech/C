@@ -1,15 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    FILE *fptr = fopen("data.txt", "w");
+    FILE *fptr = fopen("data.txt", "r");
     
     if (fptr == NULL) {
-        printf("Error opening file!\n");
+        printf("File not found!\n");
         return 1;
     }
 
-    fputc('A', fptr); // Write character
-    fclose(fptr);
+    int ch;
+    while ((ch = fgetc(fptr)) != EOF) {
+        putchar(ch);
+    }
 
+    fclose(fptr);
     return 0;
 }

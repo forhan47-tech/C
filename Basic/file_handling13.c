@@ -1,14 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    FILE *fptr = fopen("data.txt", "w");
-    
-    if (fptr == NULL) {
-        printf("Error opening file!\n");
+    FILE *file = fopen("example.txt", "r");
+
+    if (file == NULL) {
+        perror("Error opening file");
         return 1;
     }
 
-    fputs("Hello, File Handling!", fptr); // Write a string
-    fclose(fptr);
+    char line[256];
+    while (fgets(line, sizeof(line), file) != NULL) {
+        printf("%s", line);
+    }
+
+    fclose(file);
+
     return 0;
 }

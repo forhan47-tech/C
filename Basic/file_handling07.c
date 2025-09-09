@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    FILE *fptr = fopen("example.txt", "r"); // Attempt to open a file in read mode
+    FILE *fptr = fopen("example.txt", "r"); // open a file in read mode
 
     if (fptr == NULL) {
         perror("Error: Unable to open file.");
