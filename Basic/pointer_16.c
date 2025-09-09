@@ -1,16 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    int num = 100;
-    int *ptr = &num;
-    int **pptr = &ptr;
+    int arr[] = {1, 2, 3, 4, 5};
+    
+    print("Array element: ");
+    for (int *ptr = arr; ptr < arr + 5; ptr++) {
+        printf("%d ", *ptr);
+    }
 
-    // Print value
-    printf("Value of num: %d\n", **pptr);
-
-    // Print address
-    printf("Address of num: %p\n", *pptr);
-    printf("Address of ptr: %p\n", pptr);
-
+    printf("\n"); 
     return 0;
 }
+

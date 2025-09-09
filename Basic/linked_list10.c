@@ -3,49 +3,50 @@
 
 struct Node {
     int data;
-    struct Node* prev;
     struct Node* next;
 };
 
-void printCircularList(struct Node* head) {
-    if (head == NULL) return;
-    
-    struct Node* temp = head;
-    do {
-        printf("%d ⇄ ", temp->data);
-        temp = temp->next;
-    } while (temp != head);
-    printf("(back to head)\n");
+// Function to count the number of nodes
+int countNodes(struct Node* head) {
+    int count = 0;
+    while (head != NULL) {
+        count++;
+        head = head->next;
+    }
+    return count;
+}
+
+// Function to print the list
+void printList(struct Node* head) {
+    while (head != NULL) {
+        printf("%d → ", head->data);
+        head = head->next;
+    }
+    printf("NULL\n");
 }
 
 int main() {
+    // Sample list: 10 → 20 → 30
     struct Node* head = malloc(sizeof(struct Node));
     struct Node* second = malloc(sizeof(struct Node));
     struct Node* third = malloc(sizeof(struct Node));
 
-    head->data = 10;
-    second->data = 20;
-    third->data = 30;
+    head->data = 10; head->next = second;
+    second->data = 20; second->next = third;
+    third->data = 30; third->next = NULL;
 
-    // Linking next pointers
-    head->next = second;
-    second->next = third;
-    third->next = head;  // Circular link
+    printf("Linked list:\n");
+    printList(head);
 
-    // Linking prev pointers
-    head->prev = third;  // Circular link
-    second->prev = head;
-    third->prev = second;
+    int total = countNodes(head);
+    printf("Total number of nodes = %d\n", total);
 
-    printCircularList(head);
-
-    // Freeing manually to avoid breaking circular links first
-    third->next = NULL;
-    head->prev = NULL;
-
-    free(head);
-    free(second);
-    free(third);
+    // Cleanup
+    while (head != NULL) {
+        struct Node* temp = head;
+        head = head->next;
+        free(temp);
+    }
 
     return 0;
 }

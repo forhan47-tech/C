@@ -1,14 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    FILE *fp = fopen("chars.txt", "w");
+    FILE *fptr = fopen("data.txt", "r");
     
-    if (fp == NULL) return 1;
-
-    for (char ch = 'A'; ch <= 'E'; ch++) {
-        fputc(ch, fp);
+    if (fptr == NULL) {
+        printf("File not found!\n");
+        return 1;
     }
 
-    fclose(fp);
+    char buffer[100];
+    fgets(buffer, sizeof(buffer), fptr); // Read a line from the file
+    printf("Read: %s", buffer);
+
+    fclose(fptr);
     return 0;
 }

@@ -1,15 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    FILE *fp = fopen("data.txt", "a");  // "a" = append mode
+    FILE *file = fopen("numbers.txt", "r");
 
-    if (fp == NULL) {
-        printf("Error opening file!\n");
+    if (file == NULL) {
+        printf("Error opening file.\n");
         return 1;
     }
 
-    fprintf(fp, "Country: Bangladesh\n");
-    
-    fclose(fp);
+    printf("Numbers in file:\n");
+    int num;
+
+    while (fscanf(file, "%d", &num) == 1) { 
+        printf("%d\n", num);
+    }
+    fclose(file);
     return 0;
 }

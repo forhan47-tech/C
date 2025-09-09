@@ -1,2 +1,0 @@
-This is some sample data.
-Appending some new data to the file.

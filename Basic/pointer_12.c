@@ -1,19 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int num1 = 10, num2 = 20;
-    
-    int *ptr1 = &num1;
-    int *ptr2 = &num2;
-    int *ptr3 = &num1;
+    int arr[3] = {1, 2, 3, 4, 5}; 
+    int *ptr = arr;  
 
-    if (ptr1 == ptr3) {
-        printf("ptr1 and ptr3 point to the same memory location.\n");
-    }
+    printf("First element: %d\n", *ptr); 
 
-    if (ptr1 != ptr2) {
-        printf("ptr1 and ptr2 point to different memory locations.\n");
-    }
+    ptr++;            // Moves to the second element
+    printf("Second element: %d\n", *ptr); 
+
+    ptr +=2;         // Moves to the third element
+    printf("Third element: %d\n", *ptr); 
 
     return 0;
 }
+
+

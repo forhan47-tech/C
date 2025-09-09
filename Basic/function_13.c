@@ -1,14 +1,15 @@
 #include <stdio.h>
+#include <stdbool.h>
 
-void counter() {
-    static int count = 0;  // Initialized only once, retains value between calls
-    count++;
-    printf("Count: %d\n", count);
+void printStatus(bool status) {
+    if (status)
+        printf("System is ON.\n");
+    else
+        printf("System is OFF.\n");
 }
 
 int main() {
-    counter();  
-    counter();  
-    counter();  
+    printStatus(true);   
+    printStatus(false);  
     return 0;
 }

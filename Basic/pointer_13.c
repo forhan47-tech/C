@@ -1,18 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    int arr = 10, b = 20;
-    
-    int *ptr1 = &a; 
-    int *ptr2 = &b; 
+    int arr[] = {10, 20, 30, 40, 50};
+    int *ptr = &arr[4];  // Points to the last element
 
-    if (ptr1 < ptr2) {
-        printf("ptr1 point to memory location less than ptr2.\n");
-    }
+    printf("Starting at last element: %d\n", *ptr); 
 
-    if (ptr2 > ptr1) {
-        printf("ptr2 point to memory location is greater than ptr1.\n");
-    }
+    ptr--;  // Move backward by 1 element
+    printf("After moving back: %d\n", *ptr);  
+
+    ptr -= 2;  // Move backward by 2 more elements
+    printf("After moving back two more elements: %d\n", *ptr); 
 
     return 0;
 }

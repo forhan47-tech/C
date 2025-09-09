@@ -1,26 +1,23 @@
 #include <stdio.h>
-#include <string.h>
 
-struct Date {
-    int day, month, year;
-};
-
-struct Employee {
+struct Student {
+    int id;
     char name[50];
-    struct Date joiningDate;
+    float marks;
 };
 
 int main() {
-    struct Employee e1;
+    struct Student class[3];
 
-    strcpy(e1.name, "NAIMUDDIN");
-    e1.joiningDate.day = 5;
-    e1.joiningDate.month = 9;
-    e1.joiningDate.year = 2025;
+    for (int i = 0; i < 3; i++) {
+        printf("Enter ID, Name, Marks for student %d:\n", i + 1);
+        scanf("%d %s %f", &class[i].id, class[i].name, &class[i].marks);
+    }
 
-    printf("Employee: %s\n", e1.name);
-    printf("Joining Date: %02d/%02d/%d\n", e1.joiningDate.day, e1.joiningDate.month, e1.joiningDate.year);
+    printf("\nStudent Records:\n");
+    for (int i = 0; i < 3; i++) {
+        printf("ID: %d, Name: %s, Marks: %.2f\n", class[i].id, class[i].name, class[i].marks);
+    }
 
     return 0;
 }
-

@@ -1,27 +1,21 @@
 #include <stdio.h>
-#include <string.h>
 
-struct Subject {
-    char name[30];
-    int marks;
+struct Date {
+    int day;
+    int month;
+    int year;
 };
 
 struct Student {
     char name[50];
-    struct Subject subjects[3];  // Array of nested structs
+    struct Date dob;
 };
 
 int main() {
-    struct Student s = {"NAIMUDDIN", {
-        {"Math", 95},
-        {"Physics", 90},
-        {"Chemistry", 92}
-    }};
+    struct Student s = {"NAIMUDDIN", {5, 9, 2025}};
 
-    printf("Student: %s\n", s.name);
-    for (int i = 0; i < 3; i++) {
-        printf("Subject: %s, Marks: %d\n", s.subjects[i].name, s.subjects[i].marks);
-    }
+    printf("Name: %s\n", s.name);
+    printf("DOB: %02d-%02d-%d\n", s.dob.day, s.dob.month, s.dob.year);
 
     return 0;
 }

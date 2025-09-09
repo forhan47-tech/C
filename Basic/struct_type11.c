@@ -1,21 +1,26 @@
 #include <stdio.h>
+#include <string.h>
 
 struct Date {
-    int day;
-    int month;
-    int year;
+    int day, month, year;
 };
 
-struct Student {
+struct Employee {
     char name[50];
-    struct Date dob;
+    struct Date joiningDate;
 };
 
 int main() {
-    struct Student s = {"NAIMUDDIN", {5, 9, 2025}};
+    struct Employee e1;
 
-    printf("Name: %s\n", s.name);
-    printf("DOB: %02d-%02d-%d\n", s.dob.day, s.dob.month, s.dob.year);
+    strcpy(e1.name, "NAIMUDDIN");
+    e1.joiningDate.day = 5;
+    e1.joiningDate.month = 9;
+    e1.joiningDate.year = 2025;
+
+    printf("Employee: %s\n", e1.name);
+    printf("Joining Date: %02d/%02d/%d\n", e1.joiningDate.day, e1.joiningDate.month, e1.joiningDate.year);
 
     return 0;
 }
+

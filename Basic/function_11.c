@@ -1,14 +1,13 @@
 #include <stdio.h>
+#include <stdbool.h>
 
-int x = 5;  // Global variable
-
-void change() {
-    x = 100; 
-    printf("Inside function: x = %d\n", x);
+bool isEven(int n) {
+    return n % 2 == 0;
 }
 
 int main() {
-    change();
-    printf("Outside function: x = %d\n", x);
+    bool result = isEven(4);
+    
+    printf("Is even? %s\n", result ? "true" : "false");
     return 0;
 }

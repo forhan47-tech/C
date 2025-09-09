@@ -1,10 +1,12 @@
 #include <stdio.h>
 
-#ifndef TARGET_OS
-    #error "TARGET_OS must be defined. Use -DTARGET_OS=\"Linux\" when compiling."
+#define FEATURE_LEVEL 1
+
+#if FEATURE_LEVEL < 2
+    #error "Feature level too low. Requires FEATURE_LEVEL >= 2."
 #endif
 
 int main() {
-    printf("Running on %s\n", TARGET_OS);
+    printf("Feature level is %d\n", FEATURE_LEVEL);
     return 0;
 }

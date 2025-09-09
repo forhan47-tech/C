@@ -1,13 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    FILE *fp = fopen("data.txt", "w");
-    if (fp == NULL) return 1;
+    FILE *file = fopen("char.txt", "r");
 
-    for (int i = 1; i <= 3; i++) {
-        fprintf(fp, "ID: %d, Score: %.2f\n", i, i * 10.5);
+    if (file == NULL) {
+        printf("File not found!\n");
+        return 1;
     }
 
-    fclose(fp);
+    char ch = fgetc(file);  // Reads a single character
+    printf("First character: %c\n", ch);
+
+    fclose(file);
     return 0;
 }

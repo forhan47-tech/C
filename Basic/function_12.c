@@ -1,12 +1,11 @@
 #include <stdio.h>
+#include <stdbool.h>
 
-void show() {
-    int localVar = 10;  // Local variable
-    printf("Inside show(): localVar = %d\n", localVar);
+bool isPositive(int number) {
+    return number > 0;
 }
 
 int main() {
-    show();
-    // printf("%d", localVar);  // ❌ Error: localVar is not visible here
+    printf("Is positive? %s\n", isPositive(-5) ? "true" : "false");
     return 0;
 }

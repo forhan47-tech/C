@@ -1,5 +1,10 @@
-#pragma once
+#include <stdio.h>
 
-#define MAX_USERS 100
-#define APP_NAME "MyApp"
-#define VERSION "1.0.0"
+#ifndef TARGET_OS
+    #error "TARGET_OS must be defined. Use -DTARGET_OS=\"Linux\" when compiling."
+#endif
+
+int main() {
+    printf("Running on %s\n", TARGET_OS);
+    return 0;
+}

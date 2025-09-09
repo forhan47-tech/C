@@ -1,17 +1,22 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-    FILE *fptr = fopen("example.txt", "r");
+    FILE *fp = fopen("word_output.txt", "w");
 
-    if (fptr == NULL) {
-        perror("Error opening file");
+    if (fp == NULL) {
+        printf("Error opening file!\n");
         return 1;
     }
 
-    if (feof(fptr)) {
-        printf("\nReached end of file.\n");
+    char sentence[] = "Writing word by word in C.";
+    char *word = strtok(sentence, " "); 
+
+    while (word != NULL) {
+        fprintf(fp, "%s\n", word); // Write each word on a new line
+        word = strtok(NULL, " ");
     }
 
-    fclose(fptr);
+    fclose(fp);
     return 0;
 }

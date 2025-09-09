@@ -1,29 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    int matrix[3][3] = {  
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}
-    };
+    int arr[3][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
 
-    int transpose[3][3]; 
-
-    // Compute the transpose (swap rows and columns)
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            transpose[j][i] = matrix[i][j];
-        }
-    }
-
-    printf("\nTransposed Matrix:\n");
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            printf("%d ", transpose[i][j]);
+    printf("Processing columns:\n");
+    for (int j = 0; j < 4; j++) { 
+        printf("Column %d: ", j);
+        for (int i = 0; i < 3; i++) { // Process each row for the column
+            printf("%d ", arr[i][j]);
         }
         printf("\n");
     }
 
     return 0;
 }
-
