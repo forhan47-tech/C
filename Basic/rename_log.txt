@@ -254,11 +254,11 @@ Skipping (already named): memory_represent02.c
 📂 Category 'memory_represent': 2 files processed
 📂 Category 'memory_represent': 0 files processed
 📂 Category 'memory_represent': 0 files processed
-Renaming: myfile1.c → myfile01.c
-Renaming: myfile2.c → myfile02.c
+Skipping (already named): myfile01.c
+Skipping (already named): myfile02.c
 📂 Category 'myfile': 2 files processed
-Renaming: myfile1.h → myfile01.h
-Renaming: myfile2.h → myfile02.h
+Skipping (already named): myfile01.h
+Skipping (already named): myfile02.h
 📂 Category 'myfile': 2 files processed
 📂 Category 'myfile': 0 files processed
 Skipping (already named): null_statement01.c
@@ -355,11 +355,11 @@ Skipping (already named): preprocessor_13.c
 📂 Category 'preprocessor_': 13 files processed
 📂 Category 'preprocessor_': 0 files processed
 📂 Category 'preprocessor_': 0 files processed
-Renaming: printf_scanf1.c → printf_scanf01.c
-Renaming: printf_scanf2.c → printf_scanf02.c
-Renaming: printf_scanf3.c → printf_scanf03.c
-Renaming: printf_scanf4.c → printf_scanf04.c
-Renaming: printf_scanf5.c → printf_scanf05.c
+Skipping (already named): printf_scanf01.c
+Skipping (already named): printf_scanf02.c
+Skipping (already named): printf_scanf03.c
+Skipping (already named): printf_scanf04.c
+Skipping (already named): printf_scanf05.c
 📂 Category 'printf_scanf': 5 files processed
 📂 Category 'printf_scanf': 0 files processed
 📂 Category 'printf_scanf': 0 files processed
@@ -437,7 +437,7 @@ Skipping (already named): switch_statement05.c
 📂 Category 'switch_statement': 5 files processed
 📂 Category 'switch_statement': 0 files processed
 📂 Category 'switch_statement': 0 files processed
-Renaming: ternary_operator.c → ternary_operator01.c
+Skipping (already named): ternary_operator01.c
 📂 Category 'ternary_operator': 1 files processed
 📂 Category 'ternary_operator': 0 files processed
 📂 Category 'ternary_operator': 0 files processed
@@ -517,8 +517,8 @@ Skipping (already named): basic_syntax01.c
 📂 Category 'basic_syntax': 1 files processed
 📂 Category 'basic_syntax': 0 files processed
 📂 Category 'basic_syntax': 0 files processed
-Renaming: block_scope1.c → block_scope01.c
-Renaming: block_scope2.c → block_scope02.c
+Skipping (already named): block_scope01.c
+Skipping (already named): block_scope02.c
 📂 Category 'block_scope': 2 files processed
 📂 Category 'block_scope': 0 files processed
 📂 Category 'block_scope': 0 files processed
@@ -526,7 +526,7 @@ Skipping (already named): bit_fields01.c
 📂 Category 'bit_fields': 1 files processed
 📂 Category 'bit_fields': 0 files processed
 📂 Category 'bit_fields': 0 files processed
-Renaming: bit_masking02.c → bit_masking01.c
+Skipping (already named): bit_masking01.c
 📂 Category 'bit_masking': 1 files processed
 📂 Category 'bit_masking': 0 files processed
 📂 Category 'bit_masking': 0 files processed
@@ -562,15 +562,15 @@ Skipping (already named): lines01.txt
 📂 Category 'data': 0 files processed
 📂 Category 'data': 0 files processed
 📂 Category 'data': 0 files processed
-Renaming: increment_decrement.c → increment_decrement01.c
+Skipping (already named): increment_decrement01.c
 📂 Category 'increment_decrement': 1 files processed
 📂 Category 'increment_decrement': 0 files processed
 📂 Category 'increment_decrement': 0 files processed
-Renaming: arithmetic_operator.c → arithmetic_operator01.c
+Skipping (already named): arithmetic_operator01.c
 📂 Category 'arithmetic_operator': 1 files processed
 📂 Category 'arithmetic_operator': 0 files processed
 📂 Category 'arithmetic_operator': 0 files processed
-Renaming: argument_file.c → argument_file01.c
+Skipping (already named): argument_file01.c
 📂 Category 'argument_file': 1 files processed
 📂 Category 'argument_file': 0 files processed
 📂 Category 'argument_file': 0 files processed
