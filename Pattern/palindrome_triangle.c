@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int n = 5; // Modify for different sizes
+    int n = 5; 
 
     for (int i = 1; i <= n; i++) {
         // Print leading spaces
@@ -18,6 +18,5 @@ int main() {
 
         printf("\n");
     }
-
     return 0;
 }
