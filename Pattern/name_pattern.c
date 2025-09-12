@@ -2,7 +2,7 @@
 #include <string.h>
 
 int main() {
-    char name[] = "NAIMUDDIN";  // Replace with your name
+    char name[] = "NAIMUDDIN";  
 
     for (int i = 0; i < strlen(name); i++) {
         for (int j = 0; j <= i; j++) {

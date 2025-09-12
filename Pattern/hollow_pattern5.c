@@ -14,6 +14,7 @@ int main() {
         }
         printf("\n");
     }
+    
     for (int i = size - 2; i >= 0; i--) {
         for (int j = 0; j < size - i; j++) {
             printf(" ");

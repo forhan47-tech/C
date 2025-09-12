@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 int main() {
     int rows = 5;
 
@@ -11,7 +12,7 @@ int main() {
     }
 
     // Normal Right-Angled Triangle
-    for (int i = 1; i < rows; i++) { // Start from 2 to avoid duplicate middle row
+    for (int i = 1; i < rows; i++) { 
         for (int j = 0; j <= i; j++) {
             printf("* ");
         }
