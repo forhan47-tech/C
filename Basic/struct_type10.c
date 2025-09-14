@@ -18,6 +18,5 @@ int main() {
     for (int i = 0; i < 3; i++) {
         printf("ID: %d, Name: %s, Marks: %.2f\n", class[i].id, class[i].name, class[i].marks);
     }
-
     return 0;
 }

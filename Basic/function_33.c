@@ -1,21 +1,24 @@
 #include <stdio.h>
-#include <string.h>
 
 union Data {
-    int i;
-    char str[20];
+    int id;
+    float salary;
 };
 
-void updateData(union Data *d) {
-    d->i = 2025;
+void modify(union Data *e) {
+    e->salary = 75000.50;  
 }
 
 int main() {
-    union Data d;
-    strcpy(d.str, "NAIMUDDIN");  
+    union Data employee;
+    employee.id = 105;
+    
+    printf("Before Modification: ID = %d\n", employee.id);
+    
+    // Passing union by reference
+    modify(&employee);
 
-    updateData(&d);         
-    printf("Updated Integer: %d\n", d.i);
+    printf("After Modification: Salary = %.2f\n", employee.salary);
+
     return 0;
 }
-

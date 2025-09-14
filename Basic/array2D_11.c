@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    int arr[3][3] = {
-        {11, 12, 13},
-        {21, 22, 23},
-        {31, 32, 33}
-    };
+    int arr[3][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
 
-    printf("Column 2:\n");
-    for (int row = 0; row < 3; row++) {
-        printf("%d\n", arr[row][1]);  // Access column 2 (index 1)
+    printf("Processing columns:\n");
+    for (int j = 0; j < 4; j++) { 
+        printf("Column %d: ", j);
+        for (int i = 0; i < 3; i++) { // Process each row for the column
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
     }
 
     return 0;

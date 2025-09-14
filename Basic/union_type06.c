@@ -1,25 +1,25 @@
 #include <stdio.h>
 
-union Data {
-    int i;
-    float f;
-    char str[20];
-};
+typedef union {
+    int id;
+    float salary;
+} Data;
 
 int main() {
-    union Data d;
+    Data emp;
+    int choice;
 
-    printf("Enter an integer: ");
-    scanf("%d", &d.i);
-    printf("You entered: %d\n", d.i);
+    printf("Enter 1 to input Employee ID or 2 to input Salary: ");
+    scanf("%d", &choice);
 
-    printf("Enter a float: ");
-    scanf("%f", &d.f);
-    printf("You entered: %.2f\n", d.f);
-
-    printf("Enter a string: ");
-    scanf("%s", d.str);
-    printf("You entered: %s\n", d.str);
-
+    if (choice == 1) {
+        printf("Enter Employee ID: ");
+        scanf("%d", &emp.id);
+        printf("Employee ID: %d\n", emp.id);
+    } else {
+        printf("Enter Employee Salary: ");
+        scanf("%f", &emp.salary);
+        printf("Employee Salary: %.2f\n", emp.salary);
+    } 
     return 0;
 }

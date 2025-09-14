@@ -10,9 +10,10 @@ struct Student {
 
 int main() {
     struct Student s;
+
     s.rollNo = 101;
     s.marks = 95;
-
+    
     printf("Roll: %d, Marks: %d\n", s.rollNo, s.marks);
     return 0;
 }

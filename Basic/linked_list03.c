@@ -29,10 +29,8 @@ int main() {
     third->next = NULL;
 
     printList(head);
-
     free(head);
     free(second);
     free(third);
-
     return 0;
 }

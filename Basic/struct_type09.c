@@ -20,6 +20,5 @@ int main() {
             printf("Found: %s with %.2f marks\n", class[i].name, class[i].marks);
         }
     }
-
     return 0;
 }

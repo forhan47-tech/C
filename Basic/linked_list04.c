@@ -21,9 +21,7 @@ int main() {
     newNode->prev = NULL;
 
     printf("Doubly linked node created with data = %d\n", newNode->data);
-
     free(newNode);
-
     return 0;
 }
 

@@ -1,28 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Doubly Linked List Node
 struct Node {
     int data;
+    struct Node* prev;
     struct Node* next;
 };
 
-int main() {
-    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
 
-    if (newNode == NULL) {
-        printf("Memory allocation failed!\n");
-        return 1;
+void printListBackward(struct Node* tail) {
+    while (tail != NULL) {
+        printf("%d ⇄ ", tail->data);
+        tail = tail->prev;
     }
+    printf("NULL\n");
+}
 
-    newNode->data = 42;
-    newNode->next = newNode;  // Circular link to itself
+int main() {
+    struct Node* head = malloc(sizeof(struct Node));
+    struct Node* second = malloc(sizeof(struct Node));
+    struct Node* third = malloc(sizeof(struct Node));
 
-    printf("Circular node created with data = %d\n", newNode->data);
-    printf("Next node's data: %d\n", newNode->next->data);
+    head->data = 10;    
+    head->prev = NULL;   
+    head->next = second;
 
-    // Break the circle before freeing
-    newNode->next = NULL;
-    free(newNode);
+    second->data = 20;  
+    second->prev = head; 
+    second->next = third;
 
+    third->data = 30;   
+    third->prev = second; 
+    third->next = NULL;
+
+    // Print list from tail to head
+    printListBackward(third);
+    free(head);
+    free(second);
+    free(third);
     return 0;
 }
