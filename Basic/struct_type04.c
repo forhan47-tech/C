@@ -16,6 +16,5 @@ int main() {
     printf("ID: %d\n", s2.id);
     printf("Name: %s\n", s2.name);
     printf("Percentage: %.2f\n", s2.percentage);
-
     return 0;
 }

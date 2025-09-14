@@ -1,13 +1,20 @@
 #include <stdio.h>
 
 int main() {
-    int arr[3][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
+    int A[3][3] = {{9, 8, 7}, {6, 5, 4}, {3, 2, 1}};
+    int B[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int C[3][3]; // Result matrix
 
-    printf("Processing columns:\n");
-    for (int j = 0; j < 4; j++) { 
-        printf("Column %d: ", j);
-        for (int i = 0; i < 3; i++) { // Process each row for the column
-            printf("%d ", arr[i][j]);
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            C[i][j] = A[i][j] - B[i][j]; // Element-wise subtraction
+        }
+    }
+
+    printf("Resulting Matrix:\n");
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d ", C[i][j]); 
         }
         printf("\n");
     }

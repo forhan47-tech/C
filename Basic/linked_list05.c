@@ -16,14 +16,6 @@ void printListForward(struct Node* head) {
     printf("NULL\n");
 }
 
-void printListBackward(struct Node* tail) {
-    while (tail != NULL) {
-        printf("%d ⇄ ", tail->data);
-        tail = tail->prev;
-    }
-    printf("NULL\n");
-}
-
 int main() {
     struct Node* head = malloc(sizeof(struct Node));
     struct Node* second = malloc(sizeof(struct Node));
@@ -43,13 +35,8 @@ int main() {
 
     // Print list from head to tail
     printListForward(head);
-
-    // Print list from tail to head
-    printListBackward(third);
-
     free(head);
     free(second);
     free(third);
-
     return 0;
 }

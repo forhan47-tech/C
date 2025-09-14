@@ -17,6 +17,5 @@ int main() {
     printf("Name: %s\n", s1.name);
     printf("Roll: %d\n", s1.roll);
     printf("Marks: %.2f\n", s1.marks);
-
     return 0;
 }

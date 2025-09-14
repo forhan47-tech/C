@@ -18,7 +18,6 @@ int main() {
     ptr->y = 20;
 
     printf("Point coordinates: x = %d, y = %d\n", ptr->x, ptr->y);
-
     free(ptr);
     return 0;
 }

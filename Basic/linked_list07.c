@@ -4,7 +4,6 @@
 struct Node {
     int data;
     struct Node* next;
-    struct Node* prev;
 };
 
 int main() {
@@ -15,22 +14,14 @@ int main() {
         return 1;
     }
 
-    // Assign data and make it point to itself (circular + doubly)
     newNode->data = 42;
-    newNode->next = newNode;  // Circular forward
-    newNode->prev = newNode;  // Circular backward
+    newNode->next = newNode;  // Circular link to itself
 
-    printf("Doubly circular node created with data = %d\n", newNode->data);
+    printf("Circular node created with data = %d\n", newNode->data);
+    printf("Next node's data: %d\n", newNode->next->data);
 
-    // Optional check
-    printf("Next node data: %d\n", newNode->next->data);
-    printf("Prev node data: %d\n", newNode->prev->data);
-
-    // Break the circular links before freeing
+    // Break the circle before freeing
     newNode->next = NULL;
-    newNode->prev = NULL;
-
     free(newNode);
-
     return 0;
 }

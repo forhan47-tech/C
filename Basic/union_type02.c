@@ -1,23 +1,18 @@
 #include <stdio.h>
 
 typedef union {
-    int i;
-    float f;
-    char c;
+    int id;
+    float salary;
 } Data;
 
 int main() {
-    Data d;
+    Data emp;  // Declare union variable using typedef
+    
+    emp.id = 101;  // Assign value to id
+    printf("Employee ID: %d\n", emp.id);
 
-    d.i = 42;
-    printf("Integer: %d\n", d.i);
-
-    // You can also reassign values to other members
-    d.f = 3.14;
-    printf("Float: %.2f\n", d.f);
-
-    // Since unions share memory, writing to `d.f` overwrites `d.i`
+    emp.salary = 50000.75;  // Assign salary (overwrites id)
+    printf("Employee Salary: %.2f\n", emp.salary);
 
     return 0;
 }
-

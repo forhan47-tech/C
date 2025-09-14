@@ -2,22 +2,21 @@
 #include <stdlib.h> 
 
 int main() {
-    int *ptr = (int *)malloc(5 * sizeof(int));
+    int *arr = (int *)malloc(5 * sizeof(int));
 
-    if (ptr == NULL) { 
+    if (arr == NULL) { 
         printf("Memory allocation failed.\n");
         return 1;
     }
 
     for (int i = 0; i < 5; i++) {
-        ptr[i] = i + 1; 
+        arr[i] = i + 1; 
     }
 
     for (int i = 0; i < 5; i++) {
-        printf("Value at ptr[%d]: %d\n", i, ptr[i]);
+        printf("Value at ptr[%d]: %d\n", i, arr[i]);
     }
 
     free(ptr); 
-
     return 0;
 }

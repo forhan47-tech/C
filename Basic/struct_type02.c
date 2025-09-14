@@ -10,6 +10,5 @@ int main() {
 
     printf("Name: %s\n", p1.name);
     printf("Age: %d\n", p1.age);
-
     return 0;
 }

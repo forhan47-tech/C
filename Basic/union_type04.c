@@ -14,13 +14,15 @@ int main() {
     printf("Enter type: ");
     scanf("%d", &v.type);
 
-    v.num = 42;  // Store as integer
-    if (v.type == 1)
+    if (v.type == 1) {
+        v.num = 42;  // Store as integer
         printf("Stored integer: %d\n", v.num);
-       
-    v.decimal = 3.14;  // Store as float  
-    if (v.type == 2)
+    }
+        
+    if (v.type == 2) {
+        v.decimal = 3.14;  // Store as float  
         printf("Stored float: %.2f\n", v.decimal);
+    }
 
     return 0;
 }
