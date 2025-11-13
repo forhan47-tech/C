@@ -7,7 +7,7 @@ int main() {
     printf("x != y: %d\n", x != y);
     printf("x < y: %d\n", x < y);
     printf("x > y: %d\n", x > y);
-    printf("b <= c: %d\n", b <= c);
-    printf("b >= c: %d\n", b >= c);
+    printf("x <= y: %d\n", x <= y);
+    printf("x >= y: %d\n", x >= y);
     return 0;
 }
